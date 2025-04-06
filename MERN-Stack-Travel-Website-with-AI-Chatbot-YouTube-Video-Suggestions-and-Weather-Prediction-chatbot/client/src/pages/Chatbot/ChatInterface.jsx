@@ -331,7 +331,7 @@ const ChatInterface = () => {
           <div className="flex items-center">
             <FaPlane className="text-white mr-2" />
             <h1 className="text-lg sm:text-xl md:text-2xl font-semibold text-white">
-              Travel and Tourism Guide
+              徒步旅游推荐小助手
             </h1>
           </div>
           <button
