@@ -64,7 +64,7 @@ const WeatherSearch = () => {
         <input
           type="text"
           className="rounded-l-lg outline-none w-full px-2 py-2 border"
-          placeholder="Enter city name"
+          placeholder="请输入地区名称（拼音）"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           onKeyPress={handleKeyPress}

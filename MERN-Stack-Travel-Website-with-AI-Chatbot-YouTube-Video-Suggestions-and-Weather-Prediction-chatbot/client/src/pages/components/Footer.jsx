@@ -17,12 +17,12 @@ const Footer = () => {
         <div className="bg-white py-8 sm:py-12 lg:py-16">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">
-              Subscribe For <span className="text-orange-500">MORE UPDATE</span>
+              订阅以获得 <span className="text-orange-500">后续更新</span>
             </h2>
             <form onSubmit={handleSubmit} className="max-w-md mx-auto flex flex-col sm:flex-row">
               <input
                 type="email"
-                placeholder="Enter your email"
+                placeholder="输入邮箱"
                 className="flex-grow p-2 border border-gray-300 rounded-lg sm:rounded-l-lg sm:rounded-r-none mb-2 sm:mb-0 focus:outline-none focus:ring-2 focus:ring-orange-500"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -32,7 +32,7 @@ const Footer = () => {
                 type="submit"
                 className="bg-orange-500 text-white px-4 py-2 rounded-lg sm:rounded-l-none sm:rounded-r-lg hover:bg-orange-600 transition duration-300"
               >
-                SUBMIT
+                订阅
               </button>
             </form>
           </div>
@@ -46,18 +46,15 @@ const Footer = () => {
                   TRIPLO
                 </h3>
                 <p className="text-base sm:text-lg mx-3 sm:mx-5">
-                  Like <span className="text-gray-900">Triplo – travels</span>, act as digital portals, offering a
-                  seamless fusion of information and inspiration that makes
-                  exploring the world's wonders and planning travel from your
-                  screen an effortless and exciting experience.
+                  就像<span className="text-gray-900">Triplo</span>我们为徒步爱好者提供全面的信息，包括线路、装备、训练计划、天气预报和健康管理等。无论你是新手还是资深旅行者，都能找到适合的方案。加入我们，开启健康、绿色的徒步之旅，探索中国的自然美景！
                 </p>
               </div>
               <div className="ml-0 sm:ml-4 lg:ml-10">
-                <h4 className="font-semibold mb-4 text-xl text-orange-500 cursor-pointer hover:underline">CONTACT  </h4> 
+                <h4 className="font-semibold mb-4 text-xl text-orange-500 cursor-pointer hover:underline">联系我们  </h4> 
                 <ul className="space-y-2">
-                  <li>123 Street, Karnataka, INDIA</li>
-                  <li>+919134567890</li>
-                  <li>triplo@gmail.com</li>
+                  <li>北京市海淀区清华东路35号北京林业大学</li>
+                  <li>+86 18221567185</li>
+                  <li>niujiazhen26@163.com</li>
                   <li className="flex space-x-4 mt-4">
                     <FaTwitter className="text-xl hover:text-orange-500 cursor-pointer" />
                     <FaFacebook className="text-xl hover:text-orange-500 cursor-pointer" />
@@ -67,23 +64,23 @@ const Footer = () => {
                 </ul>
               </div>
               <div>
-                <h4 className=" font-semibold mb-4 text-xl text-orange-500 cursor-pointer hover:underline">COMPANY <span className="w-16 mx-2  h-[2px] bg-orange-500 "></span> </h4>
+                <h4 className=" font-semibold mb-4 text-xl text-orange-500 cursor-pointer hover:underline">企业 <span className="w-16 mx-2  h-[2px] bg-orange-500 "></span> </h4>
                 <ul className="space-y-2">
-                  <li><a href="#" className="hover:text-orange-500">About Us</a></li>
-                  <li><a href="#" className="hover:text-orange-500">Contact Us</a></li>
-                  <li><a href="#" className="hover:text-orange-500">Privacy Policy</a></li>
-                  <li><a href="#" className="hover:text-orange-500">Terms & Condition</a></li>
-                  <li><a href="#" className="hover:text-orange-500">Support</a></li>
+                  <li><a href="#" className="hover:text-orange-500">关于我们</a></li>
+                  <li><a href="#" className="hover:text-orange-500">徒步地图</a></li>
+                  <li><a href="#" className="hover:text-orange-500">生态环保</a></li>
+                  <li><a href="#" className="hover:text-orange-500">条款</a></li>
+                  <li><a href="#" className="hover:text-orange-500">支持</a></li>
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold mb-4 text-xl text-orange-500 cursor-pointer hover:underline">SERVICES</h4>
+                <h4 className="font-semibold mb-4 text-xl text-orange-500 cursor-pointer hover:underline">服务</h4>
                 <ul className="space-y-2">
-                  <li><a href="#" className="hover:text-orange-500">Destination Information</a></li>
-                  <li><a href="#" className="hover:text-orange-500">Attraction Recommendations</a></li>
-                  <li><a href="#" className="hover:text-orange-500">Travel Planning</a></li>
-                  <li><a href="#" className="hover:text-orange-500">Local Events and Activities</a></li>
-                  <li><a href="#" className="hover:text-orange-500">Travel Tips and Safety Information</a></li>
+                  <li><a href="#" className="hover:text-orange-500">目的地信息</a></li>
+                  <li><a href="#" className="hover:text-orange-500">景点推荐</a></li>
+                  <li><a href="#" className="hover:text-orange-500">徒步计划</a></li>
+                  <li><a href="#" className="hover:text-orange-500">酒店预订</a></li>
+                  <li><a href="#" className="hover:text-orange-500">徒步装备</a></li>
                 </ul>
               </div>
             </div>
@@ -91,12 +88,12 @@ const Footer = () => {
           <div className="mt-8 sm:mt-12 border-t border-gray-800 pt-6 sm:pt-8">
             <div className="container mx-auto px-4 flex flex-col sm:flex-row justify-between items-center">
               <p className="text-sm text-gray-400 mb-4 sm:mb-0">
-                © Bangalore, All Right Reserved. Designed By Amigos
+                © Niujiazhen, All Right Reserved
               </p>
               <ul className="flex flex-wrap justify-center sm:justify-end space-x-4">
-                <li><a href="#" className="text-sm text-gray-400 hover:text-orange-500">Home</a></li>
+                <li><a href="#" className="text-sm text-gray-400 hover:text-orange-500">首页</a></li>
                 <li><a href="#" className="text-sm text-gray-400 hover:text-orange-500">Cookies</a></li>
-                <li><a href="#" className="text-sm text-gray-400 hover:text-orange-500">Help</a></li>
+                <li><a href="#" className="text-sm text-gray-400 hover:text-orange-500">帮助</a></li>
                 <li><a href="#" className="text-sm text-gray-400 hover:text-orange-500">FAQs</a></li>
               </ul>
             </div>

@@ -15,7 +15,7 @@ dotenv.config();
 const __dirname = path.resolve();
 
 mongoose
-  .connect(process.env.MONGO_URL)
+  .connect("mongodb://localhost:27017/MERN")
   .then(() => {
     console.log("MongoDB Connected");
   })

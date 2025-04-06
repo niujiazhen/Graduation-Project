@@ -23,24 +23,24 @@ const Home = () => {
 
   const destinations = [
     {
-      name: "Coorg",
-      season: "Summer",
+      name: "四川四姑娘山",
+      season: "秋",
       description:
-        'Known as the "Cherrapunji of the South" for its high rainfall, this town offers a lush, waterfall-rich landscape best experienced during the monsoon season.',
+        '四姑娘山位于四川省，是徒步和登山爱好者的天堂。这里的四座雪山、广袤的原始森林和丰富的动植物资源使其成为理想的徒步旅行地。',
       image: coorgImage,
     },
     {
-      name: "Agumbe",
-      season: "Winter",
+      name: "张家界",
+      season: "夏",
       description:
-        "Agumbe lies in a hilly, wet region of the Western Ghat mountains. This geography contributes to its scenery, and suitability for trekking.",
+        "张家界以其独特的石柱山景观而闻名，是中国最具特色的徒步旅行目的地之一。这里的山脉、峡谷、溶洞和森林覆盖度高，适合进行多日的徒步探险。",
       image: AgumbeImage,
     },
     {
-      name: "Gokarna",
-      season: "Winter",
+      name: "黄山",
+      season: "春",
       description:
-        "This beach town, favored by backpackers and yoga enthusiasts, offers uncrowded beaches in winter with ideal weather for swimming, sunbathing, and surfing.",
+        "黄山是中国最著名的山脉之一，以其奇松、怪石、云海和温泉闻名。黄山的徒步线路非常丰富，适合各种水平的旅行者。",
       image: gokarnaImage,
     },
   ];
@@ -71,11 +71,11 @@ const Home = () => {
           <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center p-4 ">
             <div className="text-white font-bold flex items-center mb-4 text-sm md:text-base pt-16 ">
               <span className="w-8 md:w-16 mx-2 h-[2px] bg-orange-500"></span>
-              WELCOME TO KARNATAKA
+              欢迎来到中国徒步旅游网站TRIPLO
               <span className="w-8 md:w-16 mx-2 h-[2px] bg-orange-500"></span>
             </div>
             <h1 className="text-white text-xl md:text-4xl text-center font-bold mb-4">
-              Discover Current Weather Now
+            立即获取最新天气动态！
             </h1>
             <WeatherSearch />
           </div>
@@ -84,7 +84,7 @@ const Home = () => {
         <div className="container mx-auto px-4 py-12 ">
           <div className="my-12 bg-white p-4 md:p-8 rounded-lg shadow-md relative">
             <h2 className="text-2xl pl-5 md:text-5xl font-bold mb-4 absolute top-36">
-              Welcome to <span className="text-orange-500">TRIPLO</span>
+              欢迎来到 <span className="text-orange-500">TRIPLO</span>
             </h2> 
             <div className="flex flex-col lg:flex-row-reverse ">
               <div className="lg:w-1/2 mb-8 lg:mb-0 lg:mr-8 ">
@@ -121,10 +121,10 @@ const Home = () => {
               </div>
               <div className="lg:w-1/2 pt-44">
                 <p className="text-gray-600 mb-8  text-2xl px-4 leading-relaxed">
-                  Triplo serves as a digital gateway, opening up the world's wonders to visitors right from their screens. We offer a seamless blend of information, inspiration, and convenience, making travel planning an exciting and effortless experience.
+                欢迎来到我们的徒步旅游平台Triplo！我们致力于为<b>徒步爱好者</b>提供全面、精准的信息，包括<b>徒步线路、装备建议、训练计划、实时天气预报和健康管理</b>等。无论是初学者还是资深旅行者，都能在这里找到适合自己的旅行方案。我们倡导环保和可持续的旅游理念，鼓励旅行者亲近自然，增强环保意识。加入我们，开启一段健康、绿色的徒步之旅，探索中国壮丽的自然风光！
                 </p>
                 <button className="bg-orange-500 ml-4 text-white px-6 py-2 rounded-lg hover:bg-orange-600 transition duration-300">
-                  <Link to="/about">ABOUT US</Link>
+                  <Link to="/about">关于我们</Link>
                 </button>
               </div>
             </div>
@@ -132,10 +132,10 @@ const Home = () => {
 
           <div className="my-12">
             <h3 className="text-center text-orange-500 font-semibold mb-2">
-              OUR PLACES
+              徒步旅游推荐
             </h3>
             <h2 className="text-center text-2xl md:text-4xl font-bold mb-8">
-              Explore Our <span className="text-orange-500">PLACES</span>
+              探索 <span className="text-orange-500">以下地区</span>
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {destinations.map((place, index) => (
@@ -155,7 +155,7 @@ const Home = () => {
                     <h3 className="text-xl font-semibold mb-2">{place.name}</h3>
                     <p className="text-gray-600 mb-4">{place.description}</p>
                     <button className="text-orange-500 font-semibold hover:underline">
-                      VIEW DETAIL
+                      查看详情
                     </button>
                   </div>
                 </div>
@@ -166,7 +166,7 @@ const Home = () => {
           <div className="bg-gray-900 text-white py-8 md:py-16">
             <div className="container mx-auto px-4">
               <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">
-                Popular Destinations
+                热门徒步旅游推荐
               </h2>
               <div className="relative overflow-hidden mx-auto w-full md:w-3/4">
                 <div

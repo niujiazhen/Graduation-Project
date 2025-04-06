@@ -31,21 +31,21 @@ const About = () => {
       {/* Main Content */}
       <div className="container mx-auto px-4 py-16 hi"> 
         <section className="bg-white rounded-xl shadow-lg py-12 pl-20 px-8 mb-12">
-          <h2 className="text-orange-500 font-semibold mb-2">ABOUT US</h2>
+          <h2 className="text-orange-500 font-semibold mb-2">关于我们</h2>
           <h1 className="text-4xl font-bold mb-6">
-            Welcome to <span className="text-orange-500">TRIPLO</span>
+            欢迎来到 <span className="text-orange-500">TRIPLO</span>
           </h1>
           
           <div className="flex flex-col lg:flex-row gap-12">
             <div className="lg:w-1/2">
               <p className="text-gray-600 mb-8 leading-relaxed">
-                Triplo serves as a digital gateway, opening up the world's wonders to visitors right from their screens. We offer a seamless blend of information, inspiration, and convenience, making travel planning an exciting and effortless experience.
+              欢迎来到我们的徒步旅游平台Triplo！我们致力于为<b>徒步爱好者</b>提供全面、精准的信息，包括<b>徒步线路、装备建议、训练计划、实时天气预报和健康管理</b>等。无论是初学者还是资深旅行者，都能在这里找到适合自己的旅行方案。我们倡导环保和可持续的旅游理念，鼓励旅行者亲近自然，增强环保意识。加入我们，开启一段健康、绿色的徒步之旅，探索中国壮丽的自然风光！
               </p>
               <div className="grid grid-cols-3 gap-6 mb-8">
                 {[
-                  { icon: <i className="fas fa-hotel text-orange-500 text-3xl mb-2"></i>, number: '126', label: 'Places' },
-                  { icon: <i className="fas fa-star text-orange-500 text-3xl mb-2"></i>, number: '486', label: 'Reviews' },
-                  { icon: <i className="fas fa-users text-orange-500 text-3xl mb-2"></i>, number: '836', label: 'Clients' }
+                  { icon: <i className="fas fa-hotel text-orange-500 text-3xl mb-2"></i>, number: '126', label: '地区' },
+                  { icon: <i className="fas fa-star text-orange-500 text-3xl mb-2"></i>, number: '486', label: '评论' },
+                  { icon: <i className="fas fa-users text-orange-500 text-3xl mb-2"></i>, number: '836', label: '用户' }
                 ].map((item, index) => (
                   <div 
                     key={item.label}
@@ -61,7 +61,7 @@ const About = () => {
               <button 
                 className="bg-orange-500 text-white py-3 px-8 rounded-full hover:bg-orange-600 transition duration-300 shadow-md hover:shadow-lg text-lg font-semibold"
               >
-                EXPLORE MORE
+                探索更多
               </button>
             </div>
             

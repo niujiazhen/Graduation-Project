@@ -47,7 +47,7 @@ const Header = () => {
                     : "py-2 px-2 hover:border-orange-600 hover:rounded-md hover:text-orange-500 hover:border-b-2"
                 }`}
               >
-                Home
+                首页
               </Link>
             </li>
             <li>
@@ -61,7 +61,7 @@ const Header = () => {
                     : "py-2 px-2 hover:border-orange-600 hover:rounded-md hover:text-orange-500 hover:border-b-2"
                 }`}
               >
-                About
+                关于我们
               </Link>
             </li>
             <li>
@@ -73,7 +73,7 @@ const Header = () => {
                     : "py-2 px-2 hover:border-orange-600 hover:rounded-md hover:text-orange-500 hover:border-b-2"
                 }`}
               >
-                Contact Us
+                徒步地图
               </Link>
             </li>
             <li>
@@ -85,7 +85,7 @@ const Header = () => {
                     : "py-2 px-2 hover:border-orange-600 hover:rounded-md hover:text-orange-500 hover:border-b-2"
                 }`}
               >
-                Privacy Policy
+                生态保护
               </Link>
             </li>
           </ul>
@@ -107,7 +107,7 @@ const Header = () => {
             ) : (
               <li>
                 <Link to="/login" className="hover:from-yellow-500 hover:to-orange-700  ml-10 md:ml-0 py-4 rounded-md bg-gradient-to-r from-yellow-400 to-orange-600 px-2 font-bold text-xl text-white">
-                  Sign/Signup
+                  登录/注册
                 </Link>
               </li>
             )}
