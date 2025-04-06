@@ -38,7 +38,7 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/privacy" element={<Privacy />} />
 
-          <Route path="/ChatInterface" element={<ChatInterface />} />
+        <Route path="/ChatInterface" element={<ChatInterface />} />
       </Routes>
     </BrowserRouter>
     <Footer/>
