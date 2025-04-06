@@ -14,15 +14,15 @@ const Contact = () => {
       <div className="relative h-96 -mt-28 overflow-hidden">
         <img src={contactimg} alt="About Us Hero" className="w-full opacity-60 h-full object-cover" />
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <h1 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-orange-600 uppercase border-b-4 p-2">Contect Us</h1>
+          <h1 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-orange-600 uppercase border-b-4 p-2">徒步地图</h1>
         </div>
       </div>
       <div className="container    bg-white">
         <section className="container mx-auto px-12  py-16 ">
           <div className="text-center mb-10">
-            <h2 className="text-orange-500 font-semibold uppercase">CONTACT US</h2>
+            <h2 className="text-orange-500 font-semibold uppercase">徒步地图</h2>
             <h1 className="text-4xl font-bold mt-2">
-              <span className="text-orange-500">CONTACT</span> For Any Query
+              <span className="text-orange-500">选择</span> 你想去的地方
             </h1>
           </div>
 
@@ -45,22 +45,22 @@ const Contact = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <input
                       type="text"
-                      placeholder="Your Name"
+                      placeholder="省"
                       className="w-full px-4 py-2 border border-orange-400 border-solid rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
                     />
                     <input
                       type="email"
-                      placeholder="Your Email"
+                      placeholder="市"
                       className="w-full px-4 py-2 border border-orange-400 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
                     />
                   </div>
                   <input
                     type="text"
-                    placeholder="Subject"
+                    placeholder="具体地址"
                     className="w-full px-4 py-2 border border-orange-400 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
                   />
                   <textarea
-                    placeholder="Message"
+                    placeholder="其他信息"
                     rows="5"
                     className="w-full px-4 py-2 border border-orange-400 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
                   ></textarea>
@@ -68,7 +68,7 @@ const Contact = () => {
                     type="submit"
                     className="w-full bg-orange-500 text-white py-2 px-4 rounded-md hover:bg-orange-600 transition duration-300 ease-in-out"
                   >
-                    SEND MESSAGE
+                    查询
                   </button>
                 </form>
               </div>
