@@ -46,7 +46,7 @@ const Footer = () => {
                   TRIPLO
                 </h3>
                 <p className="text-base sm:text-lg mx-3 sm:mx-5">
-                  就像<span className="text-gray-900">Triplo</span>我们为徒步爱好者提供全面的信息，包括线路、装备、训练计划、天气预报和健康管理等。无论你是新手还是资深旅行者，都能找到适合的方案。加入我们，开启健康、绿色的徒步之旅，探索中国的自然美景！
+                  <span className="text-gray-900">Triplo</span>为徒步爱好者提供全面的信息，包括线路、装备、训练计划、天气预报和健康管理等。无论你是新手还是资深旅行者，都能找到适合的方案。加入我们，开启健康、绿色的徒步之旅，探索中国的自然美景！
                 </p>
               </div>
               <div className="ml-0 sm:ml-4 lg:ml-10">
