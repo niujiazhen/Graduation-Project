@@ -24,8 +24,11 @@ mongoose
 app.use(
   cors({
     origin: process.env.SERVER_URL,
+    credentials: true,                // 允许携带 cookies
   })
 );
+
+console.log(process.env.SERVER_URL);
 app.use(express.json());
 app.use(cookieParser());
 
@@ -45,7 +48,7 @@ if (process.env.NODE_ENV_CUSTOM === "production") {
 } else {
   // //rest api
   app.use("/", (req, res) => {
-    res.send("Welcome to travel and tourism app");
+    res.send("欢迎来到Triplo徒步旅游网站");
   });
 }
 

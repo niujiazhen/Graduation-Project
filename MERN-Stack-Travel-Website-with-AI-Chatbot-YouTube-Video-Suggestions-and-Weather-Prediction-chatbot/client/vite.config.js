@@ -9,10 +9,12 @@ export default defineConfig(({ mode }) => {
 
   return {
     server: {
+      port: 5173, // 前端运行端口
       proxy: {
         "/api": {
-          target: "https://triplo-backend.onrender.com",
+          target: "http://localhost:8000", // 代理到本地的后端接口
           secure: false,
+          changeOrigin: true, // 解决跨域问题
         },
       },
     },
