@@ -100,7 +100,7 @@ const Signup = () => {
                 className="h-4 w-4 text-orange-600 focus:ring-orange-500 border-gray-300 rounded"
               />
               <label htmlFor="agreeToTerms" className="ml-2 block text-sm text-gray-900">
-                I agree to terms of service
+                我同意如上条款政策
               </label>
             </div>
             <motion.button
@@ -109,13 +109,13 @@ const Signup = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Sign up
+              注册
             </motion.button>
             <div className="mt-6 text-center">
               <p className="text-sm text-gray-600">
                 Already have an account?{' '}
                 <Link to="/login" className="font-medium text-orange-600 hover:text-orange-500">
-                  Sign in
+                  登录
                 </Link>
               </p>
             </div>

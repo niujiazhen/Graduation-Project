@@ -119,7 +119,7 @@ const Login = () => {
                   className="h-4 w-4 text-orange-600 focus:ring-orange-500 border-gray-300 rounded"
                 />
                 <label htmlFor="rememberMe" className="ml-2 block text-sm text-gray-900">
-                  Remember me
+                  记住我
                 </label>
               </div>
             </div>
@@ -135,9 +135,9 @@ const Login = () => {
             {/* {error && <p className="text-sm text-red-600">{error}</p>} */}
             <div className="mt-6 text-center">
               <p className="text-sm text-gray-600">
-                Don't have an account?{' '}
+                还没有账号?{' '}
                 <Link to="/signup" className="font-medium text-orange-500 hover:text-orange-600">
-                  Sign up
+                  点击注册！
                 </Link>
               </p>
             </div>

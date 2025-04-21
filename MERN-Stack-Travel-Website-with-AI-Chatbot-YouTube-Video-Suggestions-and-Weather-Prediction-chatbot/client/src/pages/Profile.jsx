@@ -104,7 +104,7 @@ const Profile = () => {
       <div className="relative w-full h-96 overflow-hidden">
         <img src={aboutimg} alt="Profile Hero" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <h1 className="text-5xl font-bold text-white uppercase border-b-4 border-yellow-400 p-2">My Travel Profile</h1>
+          <h1 className="text-5xl font-bold text-white uppercase border-b-4 border-yellow-400 p-2">我的徒步记录</h1>
         </div>
       </div>
       {currentUser ? (
@@ -144,68 +144,68 @@ const Profile = () => {
                 <p className="text-gray-600 italic">"Adventure awaits!"</p>
                 <div className="w-full border-t border-gray-200 my-4"></div>
                 <div className="w-full space-y-2">
-                  <p className="text-gray-700"><strong>Email:</strong> {currentUser.email}</p>
-                  <p className="text-gray-700"><strong>Phone:</strong> {currentUser.phone}</p>
-                  <p className="text-gray-700"><strong>Address:</strong> {currentUser.address}</p>
+                  <p className="text-gray-700"><strong>邮箱:</strong> {currentUser.email}</p>
+                  <p className="text-gray-700"><strong>电话:</strong> {currentUser.phone}</p>
+                  <p className="text-gray-700"><strong>地址:</strong> {currentUser.address}</p>
                 </div>
                 <div className="w-full flex justify-between mt-6">
                   <button
                     onClick={handleLogout}
                     className="flex items-center gap-2 bg-red-500 text-white px-4 py-2 rounded-full hover:bg-red-600 transition-colors"
                   >
-                    <FaSignOutAlt /> Log Out
+                    <FaSignOutAlt /> 退出登录
                   </button>
                   <button
                     onClick={() => setActivePanelId(3)}
                     className="flex items-center gap-2 bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition-colors"
                   >
-                    <FaEdit /> Edit Profile
+                    <FaEdit /> 编辑资料
                   </button>
                 </div>
                 <button
                   onClick={handleDeleteAccount}
                   className="flex items-center gap-2 text-red-600 hover:text-red-800 transition-colors mt-4"
                 >
-                  <FaTrashAlt /> Delete Account
+                  <FaTrashAlt /> 注销账号
                 </button>
               </div>
             </div>
           </div>
           <div className="w-full md:w-2/3 p-4">
             <div className="bg-white rounded-lg shadow-xl p-6">
-              <h3 className="text-2xl font-semibold mb-4">Travel Stats</h3>
+              <h3 className="text-2xl font-semibold mb-4">徒步数据</h3>
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-gray-100 p-4 rounded-lg text-center">
                   <p className="text-3xl font-bold text-blue-600">12</p>
-                  <p className="text-gray-600">Countries Visited</p>
+                  <p className="text-gray-600">探索过的国家</p>
                 </div>
                 <div className="bg-gray-100 p-4 rounded-lg text-center">
                   <p className="text-3xl font-bold text-green-600">37</p>
-                  <p className="text-gray-600">Cities Explored</p>
+                  <p className="text-gray-600">探索过的城市</p>
                 </div>
                 <div className="bg-gray-100 p-4 rounded-lg text-center">
                   <p className="text-3xl font-bold text-purple-600">5</p>
-                  <p className="text-gray-600">Continents</p>
+                  <p className="text-gray-600">探索过的地区</p>
                 </div>
                 <div className="bg-gray-100 p-4 rounded-lg text-center">
                   <p className="text-3xl font-bold text-yellow-600">142</p>
-                  <p className="text-gray-600">Travel Photos</p>
+                  <p className="text-gray-600">徒步次数</p>
                 </div>
               </div>
               <div className="mt-8">
-                <h3 className="text-2xl font-semibold mb-4">Recent Trips</h3>
+                <h3 className="text-2xl font-semibold mb-4">近期徒步</h3>
                 <ul className="space-y-2">
                   <li className="flex justify-between items-center bg-gray-50 p-3 rounded">
-                    <span>Paris, France</span>
-                    <span className="text-gray-500">June 2023</span>
+                    <span>四姑娘山，四川</span>
+                    <span className="text-gray-500">11/04/2025</span>
                   </li>
                   <li className="flex justify-between items-center bg-gray-50 p-3 rounded">
-                    <span>Tokyo, Japan</span>
-                    <span className="text-gray-500">March 2023</span>
+                    <span>张家界</span>
+                    <span className="text-gray-500">02/11/2024</span>
                   </li>
                   <li className="flex justify-between items-center bg-gray-50 p-3 rounded">
-                    <span>New York, USA</span>
-                    <span className="text-gray-500">December 2022</span>
+                    <span>黄山，安徽</span>
+                    <span className="text-gray-500">11/12/2023</span>
                   </li>
                 </ul>
               </div>
@@ -214,7 +214,7 @@ const Profile = () => {
           {activePanelId === 3 && (
             <div className="w-full mt-8">
               <div className="bg-white rounded-lg shadow-xl p-6">
-                <h3 className="text-2xl font-semibold mb-4">Edit Profile</h3>
+                <h3 className="text-2xl font-semibold mb-4">编辑资料</h3>
                 <UpdateProfile />
               </div>
             </div>
@@ -222,9 +222,9 @@ const Profile = () => {
         </div>
       ) : (
         <div className="text-center mt-8 p-8 bg-white rounded-lg shadow-xl">
-          <p className="text-red-700 text-xl">Please log in to view your profile</p>
+          <p className="text-red-700 text-xl">请登录以查看个人信息</p>
           <Link to="/login" className="mt-4 inline-block bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition-colors">
-            Log In
+            登录
           </Link>
         </div>
       )}
