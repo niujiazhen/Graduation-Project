@@ -37,7 +37,12 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/privacy" element={<Privacy />} />
-
+         {/* <Route path="/package/:id" element={<Package />} />
+        <Route path="/package/ratings/:id" element={<RatingsPage />} /> */}
+        {/* checking user auth before booking */}
+        {/* <Route path="/booking" element={<PrivateRoute />}>
+          <Route path=":packageId" element={<Booking />} />
+        </Route> */}
         <Route path="/ChatInterface" element={<ChatInterface />} />
       </Routes>
     </BrowserRouter>

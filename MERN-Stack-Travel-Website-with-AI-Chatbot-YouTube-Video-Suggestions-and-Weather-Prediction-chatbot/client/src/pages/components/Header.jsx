@@ -85,7 +85,7 @@ const Header = () => {
                     : "py-2 px-2 hover:border-orange-600 hover:rounded-md hover:text-orange-500 hover:border-b-2"
                 }`}
               >
-                生态保护
+                徒步生态
               </Link>
             </li>
           </ul>

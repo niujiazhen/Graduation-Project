@@ -68,14 +68,14 @@ const Signup = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Sign up</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">注册</h2>
           <form onSubmit={handleSubmit} className="space-y-4">
             {[
-              { name: 'username', type: 'text', placeholder: 'Username', icon: '👤' },
-              { name: 'email', type: 'email', placeholder: 'Email', icon: '📧' },
-              { name: 'password', type: 'password', placeholder: 'Password', icon: '🔒' },
-              { name: 'address', type: 'text', placeholder: 'Address', icon: '🏠' },
-              { name: 'phone', type: 'tel', placeholder: 'Phone Number', icon: '📞' },
+              { name: 'username', type: 'text', placeholder: '用户名', icon: '👤' },
+              { name: 'email', type: 'email', placeholder: '邮箱', icon: '📧' },
+              { name: 'password', type: 'password', placeholder: '密码', icon: '🔒' },
+              { name: 'address', type: 'text', placeholder: '地址', icon: '🏠' },
+              { name: 'phone', type: 'tel', placeholder: '电话号码', icon: '📞' },
             ].map((field) => (
               <div key={field.name} className="relative">
                 <span className="absolute left-3 top-3">{field.icon}</span>
@@ -113,7 +113,7 @@ const Signup = () => {
             </motion.button>
             <div className="mt-6 text-center">
               <p className="text-sm text-gray-600">
-                Already have an account?{' '}
+                已经有账户了？{' '}
                 <Link to="/login" className="font-medium text-orange-600 hover:text-orange-500">
                   登录
                 </Link>

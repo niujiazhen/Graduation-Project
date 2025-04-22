@@ -82,7 +82,7 @@ const Login = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Login</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">登录</h2>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="relative">
               <span className="absolute left-3 top-3">📧</span>
@@ -92,7 +92,7 @@ const Login = () => {
                 id="email"
                 required
                 className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500"
-                placeholder="Email"
+                placeholder="邮件"
                 value={formData.email}
                 onChange={handleChange}
               />
@@ -105,7 +105,7 @@ const Login = () => {
                 id="password"
                 required
                 className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500"
-                placeholder="Password"
+                placeholder="密码"
                 value={formData.password}
                 onChange={handleChange}
               />
@@ -130,7 +130,7 @@ const Login = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              {loading ? "Loading..." : "Sign in"}
+              {loading ? "Loading..." : "点击登录"}
             </motion.button>
             {/* {error && <p className="text-sm text-red-600">{error}</p>} */}
             <div className="mt-6 text-center">

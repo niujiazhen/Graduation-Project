@@ -7,12 +7,12 @@ const Privacy = () => {
             <div className="relative h-96  overflow-hidden">
         <img src={contactimg} alt="About Us Hero" className="w-full opacity-60 h-full object-cover" />
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-        <h1 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-orange-600 uppercase border-b-4 p-2">生态保护</h1>
+        <h1 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-orange-600 uppercase border-b-4 p-2">徒步生态</h1>
         </div>
       </div>
     <div className="flex-grow w-full flexjustify-center py-2">
       <div className="p-16 max-w-9xl px-36 bg-white w-full">
-        <h1 className="text-3xl font-bold mb-4">生态保护</h1>
+        <h1 className="text-3xl font-bold mb-4">徒步生态</h1>
         <p className="text-sm text-gray-600 mb-6">Last updated: July 19, 2024</p>
         
         <p className="mb-6">
