@@ -15,7 +15,7 @@ const WeatherSearch = () => {
 
   const handleWeatherSearch = useCallback(async () => {
     if (!search) {
-      setError("Please enter a location");
+      setError("请输入一个位置");
       return;
     }
 
@@ -41,7 +41,7 @@ const WeatherSearch = () => {
       });
     } catch (error) {
       console.error("Error fetching weather data:", error);
-      setError("Error fetching weather data. Please try again.");
+      setError("获取数据失败，请重试！");
     } finally {
       setLoading(false);
     }
@@ -89,10 +89,10 @@ const WeatherSearch = () => {
             {weatherData.city_name}
           </h2>
           <p className="text-base md:text-lg">
-            Temperature: {weatherData.temp}°C
+            气温（摄氏度）: {weatherData.temp}°C
           </p>
           <p className="text-base md:text-lg">
-            Weather: {weatherData.weather.description}
+            天气: {weatherData.weather.description}
           </p>
         </div>
       )}
