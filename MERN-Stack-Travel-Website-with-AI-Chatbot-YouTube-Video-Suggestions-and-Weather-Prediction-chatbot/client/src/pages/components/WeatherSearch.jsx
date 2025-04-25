@@ -15,7 +15,7 @@ const WeatherSearch = () => {
 
   const handleWeatherSearch = useCallback(async () => {
     if (!search) {
-      setError("请输入一个位置");
+      setError("请输入一个地区名称/地理坐标/位置编号");
       return;
     }
 
@@ -64,7 +64,7 @@ const WeatherSearch = () => {
         <input
           type="text"
           className="rounded-l-lg outline-none w-full px-2 py-2 border"
-          placeholder="请输入地区名称（拼音）"
+          placeholder="请输入一个地区名称/地理坐标/位置编号"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           onKeyPress={handleKeyPress}
