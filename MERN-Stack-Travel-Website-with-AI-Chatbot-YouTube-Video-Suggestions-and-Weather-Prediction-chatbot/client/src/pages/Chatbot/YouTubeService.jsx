@@ -13,12 +13,12 @@ export const searchYouTubeVideos = async (query) => {
     const response = await axios.get(`${BASE_URL}/search`, {
       params: {
         part: 'snippet',
-        q: query + ' travel vlog india',
+        q: query + ' hiking tourism china',
         type: 'video',
-        maxResults: 3,
+        maxResults: 4,
         key: API_KEY,
         videoEmbeddable: true,
-        relevanceLanguage: 'kn',
+        relevanceLanguage: 'zh-Hans',
       },
     });
     return response.data.items;

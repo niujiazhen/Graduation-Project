@@ -44,7 +44,7 @@ const formatResponse = (text) => {
 };
 
 const isGreeting = (input) => {
-  const greetings = ["hi", "hello", "hey", "greetings", "howdy"];
+  const greetings = ["嗨", "哈喽", "嘿", "你好", "你好呀"];
   return greetings.some((greeting) => input.toLowerCase().includes(greeting));
 };
 
@@ -128,7 +128,7 @@ const ChatInterface = () => {
           hour: "2-digit",
           minute: "2-digit",
         }),
-        status: "sent",
+        status: "已发送",
       };
       setMessages((prevMessages) =>
         [...prevMessages, userMessage].slice(-MAX_HISTORY)
@@ -140,7 +140,7 @@ const ChatInterface = () => {
         let response;
         if (isGreeting(input)) {
           response =
-            "Hello! I'm Triplo, your travel buddy! How can I help you plan your next adventure?";
+            "你好！我是徒步旅游小助手Triplo！我可以帮你规划你的下一次徒步旅游！";
         } else {
           const context = messages
             .slice(-10)
@@ -171,7 +171,7 @@ const ChatInterface = () => {
           if (youtubeResults.length > 0) {
             const youtubeMessage = {
               id: Date.now(),
-              text: `Here are some related YouTube videos:`,
+              text: `以下是一些相关的徒步旅游视频推荐:`,
               user: false,
               timestamp: new Date().toLocaleTimeString([], {
                 hour: "2-digit",
@@ -188,7 +188,7 @@ const ChatInterface = () => {
         console.error("Error getting response:", error);
         const errorMessage = {
           id: Date.now(),
-          text: "Sorry, Please Check the internet connection and try again.",
+          text: "抱歉，请检查互联网连接并重试！",
           user: false,
           timestamp: new Date().toLocaleTimeString([], {
             hour: "2-digit",
@@ -324,7 +324,7 @@ const ChatInterface = () => {
         {!isOnline && (
           <div className="bg-red-500 text-white p-2 text-center">
             <FaWifi className="inline mr-2" />
-            You are offline
+            您已离线
           </div>
         )}
         <div className="bg-blue-600 p-4 flex items-center justify-between">
@@ -334,24 +334,24 @@ const ChatInterface = () => {
               徒步旅游推荐小助手
             </h1>
           </div>
-          <button
+          {/* <button
             onClick={toggleSettings}
             className="text-white hover:text-gray-200"
           >
             <FaCog />
-          </button>
+          </button> */}
         </div>
         {showSettings && (
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-4 shadow-md rounded-lg z-10">
-            <h2 className="text-lg font-semibold mb-2">Settings</h2>
+            <h2 className="text-lg font-semibold mb-2">设置</h2>
             <label className="block mb-2">
-              Text-to-Speech Voice:
+            文本转语音：
               <select 
               value={selectedVoice} 
               onChange={handleVoiceChange}
               className="ml-2 p-1 border rounded"
             >
-              <option value="default">Default</option>
+              <option value="default">默认</option>
               {availableVoices.map((voice) => (
                 <option key={voice.name} value={voice.name}>
                   {voice.name} ({voice.lang})
@@ -363,7 +363,7 @@ const ChatInterface = () => {
             onClick={() => setShowSettings(false)}
             className="mt-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
           >
-              Save
+              保存
             </button>
           </div>
         )}
@@ -400,7 +400,7 @@ const ChatInterface = () => {
               onChange={(e) => setInput(e.target.value)}
               onKeyPress={handleKeyPress}
               className="flex-1 bg-transparent outline-none text-sm sm:text-base"
-              placeholder="Type a message..."
+              placeholder="请输入内容..."
               disabled={isLoading || !isOnline}
             />
             <button
@@ -520,7 +520,7 @@ const MessageItem = ({ message, toggleSpeech, isSpeaking, videos }) => {
           <span>{message.timestamp}</span>
           {message.user && <span>{message.status}</span>}
         </div>
-        {!message.user && !message.isError && (
+        {/* {!message.user && !message.isError && (
           <button
             onClick={handleSpeechToggle}
             className={`absolute bottom-2 right-2 ${
@@ -529,7 +529,7 @@ const MessageItem = ({ message, toggleSpeech, isSpeaking, videos }) => {
           >
             {isSpeaking ? <FaVolumeMute /> : <FaVolumeUp />}
           </button>
-        )}
+        )} */}
       </div>
     </div>
   );

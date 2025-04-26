@@ -3,8 +3,8 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 const API_KEY = import.meta.env.VITE_GEMINI_API_KEY || process.env.VITE_GEMINI_API_KEY;
 
 if (!API_KEY) {
-  console.error("API_KEY is undefined or empty");
-  throw new Error("Gemini API key not found. Please set VITE_GEMINI_API_KEY in your .env file.");
+  console.error("API_KEY 未定义或为空");
+  throw new Error("Gemini API 密钥未找到。请在 .env 文件中设置 VITE_GEMINI_API_KEY。");
 }
 
 const genAI = new GoogleGenerativeAI(API_KEY);
@@ -20,77 +20,76 @@ const generationConfig = {
 let chat;
 let chatHistory = [];
 
-const travelPrompts = [
+// 🥾 徒步旅游主题 Prompt 列表
+const hikingPrompts = [
   {
     type: "general",
-    prompt: `Provide a comprehensive travel guide for {location}. Include:
-    1. Brief history (2-3 sentences)
-    2. Top 3-5 must-see attractions with short descriptions
-    3. Local cuisine specialties (1-2 paragraphs)
-    4. A nearby day-trip suggestion
-    5. One important cultural tip for visitors`
+    prompt: `请为在 {destination} 进行徒步旅行提供一个详细指南，考虑以下情况：
+    1. 简要描述该地徒步旅行的特色（2-3句）
+    2. 推荐3-5条适合当前气温（{temperature}）和天气状况（{weather_conditions}）的徒步路线,徒步路线要具体一些，具体到路名，公里数，地形，海拔，沿途露营地点和时间
+    3. 徒步过程中需要特别注意的事项
+    4. 推荐必备装备清单，具体一些
+    5. 一个关于当地徒步文化或环保的小贴士`
+  },
+  {
+    type: "gear",
+    prompt: `针对在 {destination} 徒步旅行，气温约为 {temperature}，天气状况为 {weather_conditions}，推荐适合的装备。包括：
+    1. 服装（上衣、裤子、鞋子）
+    2. 必需的配件（帽子、防晒用品、登山杖等）
+    3. 必备应急物品
+    4. 小贴士：如何根据气候变化灵活调整装备`
+  },
+  {
+    type: "safety",
+    prompt: `针对在 {destination} 徒步旅行（气温 {temperature}，天气 {weather_conditions}），请提供一份安全指南，涵盖：
+    1. 常见风险及预防措施
+    2. 迷路时的应对策略
+    3. 突发天气变化时的处理建议
+    4. 求救或寻求帮助的渠道`
   },
   {
     type: "itinerary",
-    prompt: `Create a {duration}-day itinerary for {location}, suitable for {traveler_type}. For each day, suggest:
-    1. Morning activity
-    2. Lunch recommendation
-    3. Afternoon activity
-    4. Evening entertainment or dining option
-    Include a mix of popular attractions and off-the-beaten-path experiences.`
+    prompt: `根据气温 {temperature} 和天气状况 {weather_conditions}，请为 {destination} 制定一条为期一天的徒步旅行行程。包括：
+    1. 起点与终点
+    2. 推荐中途休息点
+    3. 午餐或补给建议
+    4. 风景亮点和拍照打卡地
+    5. 时间安排建议`
   },
   {
-    type: "budget",
-    prompt: `Provide a budget breakdown for a {duration}-day trip to {location} for {number_of_travelers} {traveler_type}. Include estimates for:
-    1. Accommodation
-    2. Transportation
-    3. Food and drinks
-    4. Activities and entrance fees
-    5. Miscellaneous expenses
-    Suggest money-saving tips specific to this destination.`
-  },
-  {
-    type: "transportation",
-    prompt: `Explain the best ways to get around {location}. Cover:
-    1. Public transportation options and costs
-    2. Taxi and ride-sharing services
-    3. Car rental pros and cons
-    4. Walking and cycling possibilities
-    5. Any unique local transportation methods`
-  },
-  {
-    type: "accommodation",
-    prompt: `Recommend accommodation options in {location} for {traveler_type} with a {budget_level} budget. For each suggestion, provide:
-    1. Name and brief description
-    2. Approximate price range
-    3. Nearby attractions or neighborhood highlights
-    4. One standout feature or amenity`
+    type: "tips",
+    prompt: `给出一些在 {destination} 徒步旅行的小贴士，适应气温 {temperature} 和天气状况 {weather_conditions}。包括：
+    1. 体力分配技巧
+    2. 饮水与能量补充建议
+    3. 与野生动植物安全相处的方法
+    4. 环保徒步小建议`
   }
 ];
 
+// 🛠️ 创建 Prompt
 const createPrompt = (userInput) => {
-  let selectedPrompt = travelPrompts.find(p => userInput.toLowerCase().includes(p.type)) || travelPrompts[0];
+  let selectedPrompt = hikingPrompts.find(p => userInput.toLowerCase().includes(p.type)) || hikingPrompts[0];
   let filledPrompt = selectedPrompt.prompt;
 
-  // Replace placeholders with generic terms if specific info isn't provided
-  filledPrompt = filledPrompt.replace(/{location}/g, "the destination");
-  filledPrompt = filledPrompt.replace(/{duration}/g, "your trip");
-  filledPrompt = filledPrompt.replace(/{traveler_type}/g, "travelers");
-  filledPrompt = filledPrompt.replace(/{number_of_travelers}/g, "your group");
-  filledPrompt = filledPrompt.replace(/{budget_level}/g, "your");
+  // 这里的默认值可以根据你的需要进一步细化
+  filledPrompt = filledPrompt.replace(/{destination}/g, "目的地");
+  filledPrompt = filledPrompt.replace(/{temperature}/g, "当前气温");
+  filledPrompt = filledPrompt.replace(/{weather_conditions}/g, "当前天气状况");
 
-  return `You are Triplo, an AI travel guide. Provide a comprehensive and engaging response based on the following query and conversation history: "${userInput}".
+  return `你是 Triplo，一个徒步旅游专家。根据以下查询和对话历史提供专业且富有吸引力的回复：“${userInput}”。
 
 ${filledPrompt}
 
-If the query doesn't match the selected prompt exactly, adapt your response to best answer the user's question while incorporating relevant travel advice. Keep your response friendly, detailed, and exciting. Aim for about 250-300 words in total.`;
+如果查询与选定的提示不完全匹配，请根据用户的问题调整回答，同时结合实用的徒步旅行建议。保持回答友好、详细且充满探索感。建议控制在 250-300 字左右。`;
 };
 
+// 判断是否为打招呼
 const isGreeting = (input) => {
-  const greetings = ['hi', 'hello', 'hey', 'greetings', 'howdy'];
+  const greetings = ['嗨', '你好', '嘿', '问候', '你好呀'];
   return greetings.some(greeting => input.toLowerCase().includes(greeting));
 };
 
+// 初始化聊天
 export const initializeChat = () => {
   chat = model.startChat({
     generationConfig,
@@ -99,13 +98,14 @@ export const initializeChat = () => {
   chatHistory = [];
 };
 
+// 发送消息
 export const sendMessage = async (userInput) => {
   if (!chat) {
     initializeChat();
   }
 
   if (isGreeting(userInput)) {
-    const greeting = "Hello! I'm Triplo, your travel buddy! How can I Assist you today?";
+    const greeting = "你好！我是 Triplo，一名徒步旅行专家！需要帮你规划徒步路线吗？🏞️";
     chatHistory.push({ role: "model", parts: greeting });
     return greeting;
   }
@@ -118,18 +118,19 @@ export const sendMessage = async (userInput) => {
     const response = result.response.text().trim();
     chatHistory.push({ role: "model", parts: response });
 
-    // Limit chat history to last 10 messages to prevent context overflow
+    // 限制聊天历史记录为最后 10 条
     if (chatHistory.length > 10) {
       chatHistory = chatHistory.slice(-10);
     }
 
     return response;
   } catch (error) {
-    console.error('Error sending message:', error);
-    return "I'm sorry, there was an error processing your request. Please try again later.";
+    console.error('发送消息时出错:', error);
+    return "抱歉，处理您的请求时出现了错误。请稍后再试。";
   }
 };
 
+// 获取聊天历史
 export const getChatHistory = () => {
   return chatHistory;
 };
