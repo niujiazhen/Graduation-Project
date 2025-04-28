@@ -12,6 +12,11 @@ import ChatInterface  from "./pages/Chatbot/ChatInterface";
 import Footer from "./pages/components/Footer";
 import Contact from "./pages/Contact";
 import Privacy from "./pages/Privacy";
+import Search from "./pages/Search";
+import PackageCard from "./pages/PackageCard";
+import Package from "./pages/Package";
+import RatingsPage from "./pages/RatingsPage";
+import RatingCard from "./pages/RatingCard";
 
 const App = () => {
   console.log("VITE_GEMINI_API_KEY:", import.meta.env.VITE_GEMINI_API_KEY);
@@ -24,7 +29,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-        {/* <Route path="/search" element={<Search />} /> */}
+        <Route path="/search" element={<Search />} />
         {/* user */}
         <Route path="/profile" element={<PrivateRoute />}>
           <Route path="user" element={<Profile />} />
@@ -37,8 +42,8 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/privacy" element={<Privacy />} />
-         {/* <Route path="/package/:id" element={<Package />} />
-        <Route path="/package/ratings/:id" element={<RatingsPage />} /> */}
+         <Route path="/package/:id" element={<Package />} />
+        <Route path="/package/ratings/:id" element={<RatingsPage />} />
         {/* checking user auth before booking */}
         {/* <Route path="/booking" element={<PrivateRoute />}>
           <Route path=":packageId" element={<Booking />} />
