@@ -1,0 +1,233 @@
+[{
+  "_id": {
+    "$oid": "68108776107a116c0065f9fb"
+  },
+  "packageName": "虎跳峡经典徒步之旅",
+  "packageDescription": "穿越中国最壮丽的峡谷之一，感受奔腾怒江的震撼。",
+  "packageDestination": "云南虎跳峡",
+  "packageDays": 3,
+  "packageNights": 2,
+  "packageAccommodation": "峡谷客栈、山间旅馆",
+  "packageTransportation": "巴士接送",
+  "packageGear": "登山鞋、防晒衣、登山杖、背包、头灯、雨衣",
+  "packageActivities": "高路徒步路线穿越茶马古道，欣赏玉龙雪山和哈巴雪山全景。",
+  "packagePrice": 1299,
+  "packageDiscountPrice": 1099,
+  "packageOffer": true,
+  "packageRating": 4.8,
+  "packageTotalRatings": 152,
+  "packageImages": [
+    "https://example.com/images/tigerleaping1.jpg",
+    "https://example.com/images/tigerleaping2.jpg"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68108776107a116c0065f9fc"
+  },
+  "packageName": "长白山森林徒步之旅",
+  "packageDescription": "探索中国东北神秘森林，欣赏火山湖与瀑布。",
+  "packageDestination": "吉林长白山",
+  "packageDays": 4,
+  "packageNights": 3,
+  "packageAccommodation": "山林木屋、营地",
+  "packageTransportation": "高铁 + 专车接送",
+  "packageGear": "防水徒步靴、户外炉具、防蚊喷雾、登山包",
+  "packageActivities": "环湖路线：天池—瀑布—地下森林—温泉徒步体验。",
+  "packagePrice": 1799,
+  "packageDiscountPrice": 1599,
+  "packageOffer": true,
+  "packageRating": 4.6,
+  "packageTotalRatings": 89,
+  "packageImages": [
+    "https://example.com/images/changbaishan1.jpg",
+    "https://example.com/images/changbaishan2.jpg"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68108776107a116c0065f9fd"
+  },
+  "packageName": "贡嘎雪山徒步挑战",
+  "packageDescription": "挑战蜀山之王，体验极致高原徒步。",
+  "packageDestination": "四川贡嘎山",
+  "packageDays": 6,
+  "packageNights": 5,
+  "packageAccommodation": "高原营地、藏式客栈",
+  "packageTransportation": "成都集合专车",
+  "packageGear": "高海拔睡袋、氧气瓶、冲锋衣、登山杖、帐篷",
+  "packageActivities": "子梅垭口—冷嘎措—贡嘎寺—徒步摄影圣地。",
+  "packagePrice": 3999,
+  "packageDiscountPrice": 3799,
+  "packageOffer": false,
+  "packageRating": 4.9,
+  "packageTotalRatings": 210,
+  "packageImages": [
+    "https://example.com/images/gongga1.jpg",
+    "https://example.com/images/gongga2.jpg"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68108776107a116c0065f9fe"
+  },
+  "packageName": "雨崩村秘境徒步",
+  "packageDescription": "梅里雪山脚下的藏地秘境，感受原生态村落与自然奇观。",
+  "packageDestination": "云南雨崩村",
+  "packageDays": 5,
+  "packageNights": 4,
+  "packageAccommodation": "藏式民宿",
+  "packageTransportation": "飞往香格里拉 + 包车",
+  "packageGear": "中帮徒步鞋、防风衣、登山杖、睡袋",
+  "packageActivities": "尼农峡谷—雨崩下村—神瀑徒步朝圣路线。",
+  "packagePrice": 2299,
+  "packageDiscountPrice": 1999,
+  "packageOffer": true,
+  "packageRating": 4.7,
+  "packageTotalRatings": 174,
+  "packageImages": [
+    "https://example.com/images/yubeng1.jpg",
+    "https://example.com/images/yubeng2.jpg"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68108776107a116c0065f9ff"
+  },
+  "packageName": "梵净山原始森林徒步",
+  "packageDescription": "探索世界自然遗产地，观赏佛光和红云金顶。",
+  "packageDestination": "贵州铜仁",
+  "packageDays": 2,
+  "packageNights": 1,
+  "packageAccommodation": "山脚客栈",
+  "packageTransportation": "高铁 + 专车",
+  "packageGear": "登山鞋、防潮垫、水袋、护膝",
+  "packageActivities": "金顶登顶路线，林中鸟语徒步体验。",
+  "packagePrice": 899,
+  "packageDiscountPrice": 799,
+  "packageOffer": true,
+  "packageRating": 4.5,
+  "packageTotalRatings": 68,
+  "packageImages": [
+    "https://example.com/images/fanjingshan1.jpg",
+    "https://example.com/images/fanjingshan2.jpg"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68108776107a116c0065fa00"
+  },
+  "packageName": "稻城亚丁环线徒步",
+  "packageDescription": "被誉为‘蓝色星球上的最后一片净土’。",
+  "packageDestination": "四川稻城",
+  "packageDays": 7,
+  "packageNights": 6,
+  "packageAccommodation": "藏式民居、帐篷营地",
+  "packageTransportation": "越野车全程",
+  "packageGear": "冲锋衣、登山包、营地锅具、太阳镜",
+  "packageActivities": "牛奶海—五色海—仙乃日大转山环线。",
+  "packagePrice": 4999,
+  "packageDiscountPrice": 4499,
+  "packageOffer": false,
+  "packageRating": 3.8,
+  "packageTotalRatings": 5,
+  "packageImages": [
+    "https://example.com/images/yading1.jpg",
+    "https://example.com/images/yading2.jpg"
+  ],
+  "updatedAt": {
+    "$date": "2025-04-29T09:02:04.241Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68108776107a116c0065fa01"
+  },
+  "packageName": "武功山云中草甸徒步",
+  "packageDescription": "踏上中国最美草甸山脊，追逐云海与星空。",
+  "packageDestination": "江西萍乡",
+  "packageDays": 3,
+  "packageNights": 2,
+  "packageAccommodation": "帐篷营地、山上木屋",
+  "packageTransportation": "动车 + 徒步接驳",
+  "packageGear": "露营帐篷、防水鞋、头灯、抓绒衣",
+  "packageActivities": "金顶看日出、草甸露营、栈道徒步穿越。",
+  "packagePrice": 1099,
+  "packageDiscountPrice": 999,
+  "packageOffer": true,
+  "packageRating": 4.6,
+  "packageTotalRatings": 124,
+  "packageImages": [
+    "https://example.com/images/wugong1.jpg",
+    "https://example.com/images/wugong2.jpg"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68108776107a116c0065fa02"
+  },
+  "packageName": "阿尔山森林徒步探秘",
+  "packageDescription": "北国之秋最美森林，火山地貌与湖泊穿行。",
+  "packageDestination": "内蒙古阿尔山",
+  "packageDays": 4,
+  "packageNights": 3,
+  "packageAccommodation": "森林旅馆",
+  "packageTransportation": "包车",
+  "packageGear": "徒步鞋、登山杖、防晒帽、能量棒",
+  "packageActivities": "杜鹃湖—地池—石塘林森林路线。",
+  "packagePrice": 1899,
+  "packageDiscountPrice": 1699,
+  "packageOffer": false,
+  "packageRating": 4.4,
+  "packageTotalRatings": 56,
+  "packageImages": [
+    "https://example.com/images/aershan1.jpg",
+    "https://example.com/images/aershan2.jpg"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68108776107a116c0065fa03"
+  },
+  "packageName": "西岭雪山冬季雪地徒步",
+  "packageDescription": "冰雪世界中的徒步新体验。",
+  "packageDestination": "四川西岭雪山",
+  "packageDays": 2,
+  "packageNights": 1,
+  "packageAccommodation": "山顶酒店",
+  "packageTransportation": "大巴",
+  "packageGear": "雪地靴、保暖衣、冰爪、手套",
+  "packageActivities": "雪景登山、森林穿越、雪地摄影。",
+  "packagePrice": 999,
+  "packageDiscountPrice": 899,
+  "packageOffer": true,
+  "packageRating": 4.3,
+  "packageTotalRatings": 70,
+  "packageImages": [
+    "https://example.com/images/xiling1.jpg",
+    "https://example.com/images/xiling2.jpg"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68108776107a116c0065fa04"
+  },
+  "packageName": "普达措国家公园环湖徒步",
+  "packageDescription": "滇西高原生态奇观，湖光山色尽收眼底。",
+  "packageDestination": "香格里拉普达措",
+  "packageDays": 3,
+  "packageNights": 2,
+  "packageAccommodation": "藏式客栈",
+  "packageTransportation": "飞机 + 专车",
+  "packageGear": "徒步鞋、登山包、望远镜、雨衣",
+  "packageActivities": "属都湖—碧塔海—高原森林徒步环线。",
+  "packagePrice": 1599,
+  "packageDiscountPrice": 1499,
+  "packageOffer": false,
+  "packageRating": 4.7,
+  "packageTotalRatings": 92,
+  "packageImages": [
+    "https://example.com/images/pudacuo1.jpg",
+    "https://example.com/images/pudacuo2.jpg"
+  ]
+}]

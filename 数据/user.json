@@ -1,0 +1,95 @@
+[{
+  "_id": {
+    "$oid": "6809a5996a6cb711381bf5e0"
+  },
+  "username": "njz",
+  "email": "njz@123.com",
+  "password": "$2a$10$IqiCVv7VP6Saw5lC5Aruv.xE6ml1x5QIcea4ti.aivC0rPCfWC/Cu",
+  "address": "Beijing Forestry University, No. 35, Qinghua East Road, Haidian District",
+  "phone": "18221567185",
+  "avatar": "https://firebasestorage.googleapis.com/v0/b/mern-travel-tourism.appspot.com/o/profile-photos%2F1706415975072defaultProfileImgttms125.png?alt=media&token=7f309b9e-7ccf-4a15-ba5c-829c9952a85c",
+  "user_role": 0,
+  "createdAt": {
+    "$date": "2025-04-24T02:44:41.664Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-24T02:44:41.664Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681093ecb37f5825f90fc9a4"
+  },
+  "username": "张晓明",
+  "email": "abc@123.com",
+  "password": "$2a$10$MXqIGnR/DOjL72a7OUFvHOC8MusbwfN4KfLyJE3poJwIMtFVXWOmu",
+  "address": "123123",
+  "phone": "123123123",
+  "avatar": "https://firebasestorage.googleapis.com/v0/b/mern-travel-tourism.appspot.com/o/profile-photos%2F1706415975072defaultProfileImgttms125.png?alt=media&token=7f309b9e-7ccf-4a15-ba5c-829c9952a85c",
+  "user_role": 0,
+  "createdAt": {
+    "$date": "2025-04-29T08:55:08.671Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-29T08:55:08.671Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68109488b37f5825f90fc9b6"
+  },
+  "username": "王峰",
+  "email": "wf@123.com",
+  "password": "$2a$10$vtuzkXgUW9nBzmFceWYfKuMcTxRbijOMejO209wreeo3/sYeeJJXm",
+  "address": "123123",
+  "phone": "123123",
+  "avatar": "https://firebasestorage.googleapis.com/v0/b/mern-travel-tourism.appspot.com/o/profile-photos%2F1706415975072defaultProfileImgttms125.png?alt=media&token=7f309b9e-7ccf-4a15-ba5c-829c9952a85c",
+  "user_role": 0,
+  "createdAt": {
+    "$date": "2025-04-29T08:57:44.160Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-29T08:57:44.160Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681094b6b37f5825f90fc9c6"
+  },
+  "username": "张伟",
+  "email": "zw@123.com",
+  "password": "$2a$10$g3imltvKMlmtDe3X/bc/UOcNAkuv26nOP2ehBWf/1MAdKMo2cyEiS",
+  "address": "123123",
+  "phone": "123123",
+  "avatar": "https://firebasestorage.googleapis.com/v0/b/mern-travel-tourism.appspot.com/o/profile-photos%2F1706415975072defaultProfileImgttms125.png?alt=media&token=7f309b9e-7ccf-4a15-ba5c-829c9952a85c",
+  "user_role": 0,
+  "createdAt": {
+    "$date": "2025-04-29T08:58:30.109Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-29T08:58:30.109Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6810956fb37f5825f90fc9dc"
+  },
+  "username": "张明",
+  "email": "zm@123.com",
+  "password": "$2a$10$kRjD1U1Hw158InxtiphDneYJZZog.qg2Cl4/FBhNgrCHv1NXR7Uzu",
+  "address": "123123",
+  "phone": "123123",
+  "avatar": "https://firebasestorage.googleapis.com/v0/b/mern-travel-tourism.appspot.com/o/profile-photos%2F1706415975072defaultProfileImgttms125.png?alt=media&token=7f309b9e-7ccf-4a15-ba5c-829c9952a85c",
+  "user_role": 0,
+  "createdAt": {
+    "$date": "2025-04-29T09:01:35.776Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-29T09:01:35.776Z"
+  },
+  "__v": 0
+}]

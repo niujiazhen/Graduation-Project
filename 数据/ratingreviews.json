@@ -1,0 +1,90 @@
+[{
+  "_id": {
+    "$oid": "68109297b37f5825f90fc998"
+  },
+  "rating": 3,
+  "review": "风景非常美，路线设计合理，适合初中级徒步者。营地设施也很完善，值得推荐！",
+  "packageId": "68108776107a116c0065fa00",
+  "userRef": "6809a5996a6cb711381bf5e0",
+  "username": "niujiazhen26@163.com",
+  "userProfileImg": "https://firebasestorage.googleapis.com/v0/b/mern-travel-tourism.appspot.com/o/profile-photos%2F1706415975072defaultProfileImgttms125.png?alt=media&token=7f309b9e-7ccf-4a15-ba5c-829c9952a85c",
+  "createdAt": {
+    "$date": "2025-04-29T08:49:27.929Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-29T08:49:27.929Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68109409b37f5825f90fc9ab"
+  },
+  "rating": 4,
+  "review": "整体体验不错，但部分路段较为湿滑，建议携带登山杖。领队很专业。",
+  "packageId": "68108776107a116c0065fa00",
+  "userRef": "681093ecb37f5825f90fc9a4",
+  "username": "张晓明",
+  "userProfileImg": "https://firebasestorage.googleapis.com/v0/b/mern-travel-tourism.appspot.com/o/profile-photos%2F1706415975072defaultProfileImgttms125.png?alt=media&token=7f309b9e-7ccf-4a15-ba5c-829c9952a85c",
+  "createdAt": {
+    "$date": "2025-04-29T08:55:37.968Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-29T08:55:37.968Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681094a0b37f5825f90fc9bd"
+  },
+  "rating": 3,
+  "review": "路线太基础了，对于有经验的徒步者来说挑战性不够，但新手应该会喜欢。",
+  "packageId": "68108776107a116c0065fa00",
+  "userRef": "68109488b37f5825f90fc9b6",
+  "username": "王峰",
+  "userProfileImg": "https://firebasestorage.googleapis.com/v0/b/mern-travel-tourism.appspot.com/o/profile-photos%2F1706415975072defaultProfileImgttms125.png?alt=media&token=7f309b9e-7ccf-4a15-ba5c-829c9952a85c",
+  "createdAt": {
+    "$date": "2025-04-29T08:58:08.151Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-29T08:58:08.151Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681094ceb37f5825f90fc9cd"
+  },
+  "rating": 4,
+  "review": "住宿条件还可以，干净整洁。唯一的缺点是夜间气温较低，建议带厚睡袋。",
+  "packageId": "68108776107a116c0065fa00",
+  "userRef": "681094b6b37f5825f90fc9c6",
+  "username": "张伟",
+  "userProfileImg": "https://firebasestorage.googleapis.com/v0/b/mern-travel-tourism.appspot.com/o/profile-photos%2F1706415975072defaultProfileImgttms125.png?alt=media&token=7f309b9e-7ccf-4a15-ba5c-829c9952a85c",
+  "createdAt": {
+    "$date": "2025-04-29T08:58:54.384Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-29T08:58:54.384Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6810958cb37f5825f90fc9e3"
+  },
+  "rating": 5,
+  "review": "强烈推荐这个徒步路线！沿途的湖泊和山景令人震撼，适合拍照留念。",
+  "packageId": "68108776107a116c0065fa00",
+  "userRef": "6810956fb37f5825f90fc9dc",
+  "username": "张明",
+  "userProfileImg": "https://firebasestorage.googleapis.com/v0/b/mern-travel-tourism.appspot.com/o/profile-photos%2F1706415975072defaultProfileImgttms125.png?alt=media&token=7f309b9e-7ccf-4a15-ba5c-829c9952a85c",
+  "createdAt": {
+    "$date": "2025-04-29T09:02:04.233Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-29T09:02:04.233Z"
+  },
+  "__v": 0
+}]
