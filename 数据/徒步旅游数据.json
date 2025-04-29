@@ -1,0 +1,84 @@
+[
+  {
+    "packageName": "云南洱海休闲之旅",
+    "packageDescription": "在洱海边享受舒适的三日假期，体验白族文化与自然美景。",
+    "packageDestination": "云南 大理",
+    "packageDays": 3,
+    "packageNights": 2,
+    "packageAccommodation": "特色民宿",
+    "packageTransportation": "高铁+当地接送",
+    "packageMeals": "每日早餐",
+    "packageActivities": "环洱海骑行、蝴蝶泉游览、白族村落探访",
+    "packagePrice": 2999,
+    "packageDiscountPrice": 2499,
+    "packageOffer": true,
+    "packageRating": 4.5,
+    "packageTotalRatings": 128,
+    "packageImages": [
+      "https://example.com/images/erhai1.jpg",
+      "https://example.com/images/erhai2.jpg",
+      "https://example.com/images/erhai3.jpg"
+    ]
+  },
+  {
+    "packageName": "张家界森林公园探险",
+    "packageDescription": "走进世界自然遗产，体验绝美的奇峰异石与玻璃栈道。",
+    "packageDestination": "湖南 张家界",
+    "packageDays": 4,
+    "packageNights": 3,
+    "packageAccommodation": "四星级酒店",
+    "packageTransportation": "高铁+旅游大巴",
+    "packageMeals": "每日早餐+两次正餐",
+    "packageActivities": "天门山、袁家界、玻璃桥挑战",
+    "packagePrice": 3599,
+    "packageDiscountPrice": 3299,
+    "packageOffer": true,
+    "packageRating": 4.8,
+    "packageTotalRatings": 200,
+    "packageImages": [
+      "https://example.com/images/zhangjiajie1.jpg",
+      "https://example.com/images/zhangjiajie2.jpg"
+    ]
+  },
+  {
+    "packageName": "西藏拉萨文化深度游",
+    "packageDescription": "朝圣之路，感受布达拉宫与圣湖的神秘魅力。",
+    "packageDestination": "西藏 拉萨",
+    "packageDays": 6,
+    "packageNights": 5,
+    "packageAccommodation": "藏式风情酒店",
+    "packageTransportation": "飞机+当地旅游车",
+    "packageMeals": "全程含餐",
+    "packageActivities": "布达拉宫、大昭寺、纳木错湖",
+    "packagePrice": 7999,
+    "packageDiscountPrice": 7499,
+    "packageOffer": true,
+    "packageRating": 4.9,
+    "packageTotalRatings": 85,
+    "packageImages": [
+      "https://example.com/images/lhasa1.jpg",
+      "https://example.com/images/lhasa2.jpg",
+      "https://example.com/images/lhasa3.jpg"
+    ]
+  },
+  {
+    "packageName": "黄山日出摄影之旅",
+    "packageDescription": "登顶黄山之巅，捕捉壮观云海与绝美日出。",
+    "packageDestination": "安徽 黄山",
+    "packageDays": 2,
+    "packageNights": 1,
+    "packageAccommodation": "山顶酒店",
+    "packageTransportation": "高铁+登山缆车",
+    "packageMeals": "一早一晚餐",
+    "packageActivities": "迎客松、光明顶、梦笔生花",
+    "packagePrice": 1999,
+    "packageDiscountPrice": 1799,
+    "packageOffer": false,
+    "packageRating": 4.6,
+    "packageTotalRatings": 98,
+    "packageImages": [
+      "https://example.com/images/huangshan1.jpg",
+      "https://example.com/images/huangshan2.jpg"
+    ]
+  }
+]

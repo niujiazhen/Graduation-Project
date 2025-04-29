@@ -319,7 +319,7 @@ const ChatInterface = () => {
     localStorage.setItem("selectedVoice", e.target.value);
   };
   return (
-    <div className="flex justify-center items-center min-h-screen backaground_image sticky bg-gray-100 pt-20">
+    <div className="flex justify-center items-center min-h-screen backaground_image sticky bg-gray-100 pt-20 mt-[10px]">
       <div className="flex flex-col h-screen w-full md:h-[600px] md:w-[768px] lg:w-[1024px] bg-white shadow-xl rounded-lg overflow-hidden relative">
         {!isOnline && (
           <div className="bg-red-500 text-white p-2 text-center">

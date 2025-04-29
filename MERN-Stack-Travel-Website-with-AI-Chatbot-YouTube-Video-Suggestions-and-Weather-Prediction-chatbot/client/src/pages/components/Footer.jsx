@@ -88,7 +88,6 @@ const Footer = () => {
           <div className="mt-8 sm:mt-12 border-t border-gray-800 pt-6 sm:pt-8">
             <div className="container mx-auto px-4 flex flex-col sm:flex-row justify-between items-center">
               <p className="text-sm text-gray-400 mb-4 sm:mb-0">
-                © Niujiazhen, All Right Reserved
               </p>
               <ul className="flex flex-wrap justify-center sm:justify-end space-x-4">
                 <li><a href="#" className="text-sm text-gray-400 hover:text-orange-500">首页</a></li>
