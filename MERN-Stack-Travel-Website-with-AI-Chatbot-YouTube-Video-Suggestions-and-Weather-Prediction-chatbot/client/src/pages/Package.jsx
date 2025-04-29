@@ -234,10 +234,10 @@ const Package = () => {
             <p className="flex gap-1 text-2xl font-semibold my-3">
               {packageData?.packageOffer ? (
                 <>
-                  <span className="line-through text-gray-700">
+                  <span className="text-gray-700">
                     预计花费：¥{packageData?.packagePrice}
                   </span>{" "}
-                  -<span>预计花费：¥{packageData?.packageDiscountPrice}</span>
+                  {/* -<span>预计花费：¥{packageData?.packageDiscountPrice}</span>
                   <span className="text-lg ml-2 bg-green-700 p-1 rounded text-white">
                     {Math.floor(
                       ((+packageData?.packagePrice -
@@ -246,7 +246,7 @@ const Package = () => {
                         100
                     )}
                     % Off
-                  </span>
+                  </span> */}
                 </>
               ) : (
                 <span>预计花费：¥{packageData?.packagePrice}</span>

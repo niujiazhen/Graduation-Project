@@ -39,7 +39,7 @@ const RatingsPage = () => {
   }, [params.id]);
 
   return (
-    <div className="w-full p-3">
+    <div className="w-full p-3 mt-[70px]">
       <div className="w-full">
         {loading && <h1 className="text-center text-2xl">Loading...</h1>}
         {!loading && !packageRatings && (
@@ -48,7 +48,7 @@ const RatingsPage = () => {
         {!loading && packageRatings && (
           <div className="w-full p-2 flex flex-col gap-2">
             <h1 className="flex items-center mb-2">
-              Rating:
+              评分:
               <Rating
                 size="large"
                 value={showRatingStars || 0}
@@ -61,7 +61,7 @@ const RatingsPage = () => {
               onClick={() => navigate(`/package/${params?.id}`)}
               className="p-2 py-1 border rounded w-min hover:bg-slate-500 hover:text-white"
             >
-              Back
+              返回
             </button>
             <hr />
             <div className="w-full p-2 grid 2xl:grid-cols-7 xl:grid-cols-6 xlplus:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-3">
