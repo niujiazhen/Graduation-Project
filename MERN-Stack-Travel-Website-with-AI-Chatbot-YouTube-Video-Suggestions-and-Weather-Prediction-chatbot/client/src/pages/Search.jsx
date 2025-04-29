@@ -102,7 +102,7 @@ const Search = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row mt-[50px]">
+    <div className="flex flex-col md:flex-row mt-[70px]">
       <div className="p-7 border-b-2 md:border-r-2 md:min-h-screen">
         <form className="flex flex-col gap-8" onSubmit={handleSubmit}>
           <div className="flex items-center gap-2">

@@ -222,7 +222,7 @@ const Package = () => {
             <FaArrowLeft
               className="text-slate-500"
               onClick={() => {
-                navigate("/");
+                navigate("/search");
               }}
             />
           </div>
