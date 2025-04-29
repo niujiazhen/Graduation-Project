@@ -113,7 +113,7 @@ const Search = () => {
               onChange={handleChange}
             />
           </div>
-          <div className="flex gap-2 flex-wrap items-center">
+          {/* <div className="flex gap-2 flex-wrap items-center">
             <label className="font-semibold">筛选:</label>
             <div className="flex gap-2">
               <input
@@ -125,7 +125,7 @@ const Search = () => {
               />
               <span>仅限优惠路线</span>
             </div>
-          </div>
+          </div> */}
           <div className="flex items-center gap-2">
             <label className="font-semibold">排序方式:</label>
             <select
@@ -134,9 +134,9 @@ const Search = () => {
               id="sort_order"
               className="p-3 border rounded-lg"
             >
-              <option value="packagePrice_desc">价格从高到低</option>
-              <option value="packagePrice_asc">价格从低到高</option>
               <option value="packageRating_desc">评分优先</option>
+              <option value="packagePrice_desc">花费从高到低</option>
+              <option value="packagePrice_asc">花费从低到高</option>
               <option value="packageTotalRatings_desc">最多评价</option>
               <option value="createdAt_desc">最新发布</option>
               <option value="createdAt_asc">最早发布</option>
