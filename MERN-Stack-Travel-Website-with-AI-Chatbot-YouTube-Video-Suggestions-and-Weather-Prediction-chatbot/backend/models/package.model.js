@@ -30,7 +30,7 @@ const packageSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    packageMeals: {
+    packageGear: {
       type: String,
       required: true,
     },

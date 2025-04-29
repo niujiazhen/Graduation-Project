@@ -13,7 +13,6 @@ const Search = () => {
   const [loading, setLoading] = useState(false);
   const [allPackages, setAllPackages] = useState([]);
   const [showMoreBtn, setShowMoreBtn] = useState(false);
-  //   console.log(listings);
 
   useEffect(() => {
     const urlParams = new URLSearchParams(location.search);
@@ -68,9 +67,7 @@ const Search = () => {
     }
     if (e.target.id === "sort_order") {
       const sort = e.target.value.split("_")[0] || "created_at";
-
       const order = e.target.value.split("_")[1] || "desc";
-
       setSideBarSearchData({ ...sideBarSearchData, sort, order });
     }
   };
@@ -106,18 +103,18 @@ const Search = () => {
       <div className="p-7 border-b-2 md:border-r-2 md:min-h-screen">
         <form className="flex flex-col gap-8" onSubmit={handleSubmit}>
           <div className="flex items-center gap-2">
-            <label className="whitespace-nowrap font-semibold">Search:</label>
+            <label className="whitespace-nowrap font-semibold">搜索:</label>
             <input
               type="text"
               id="searchTerm"
-              placeholder="Search"
+              placeholder="输入徒步路线、地点或描述"
               className="border rounded-lg p-3 w-full"
               value={sideBarSearchData.searchTerm}
               onChange={handleChange}
             />
           </div>
           <div className="flex gap-2 flex-wrap items-center">
-            <label className="font-semibold">Type:</label>
+            <label className="font-semibold">筛选:</label>
             <div className="flex gap-2">
               <input
                 type="checkbox"
@@ -126,42 +123,42 @@ const Search = () => {
                 checked={sideBarSearchData.offer}
                 onChange={handleChange}
               />
-              <span>Offer</span>
+              <span>仅限优惠路线</span>
             </div>
           </div>
           <div className="flex items-center gap-2">
-            <label className="font-semibold">Sort:</label>
+            <label className="font-semibold">排序方式:</label>
             <select
               onChange={handleChange}
               defaultValue={"created_at_desc"}
               id="sort_order"
               className="p-3 border rounded-lg"
             >
-              <option value="packagePrice_desc">Price high to low</option>
-              <option value="packagePrice_asc">Price low to high</option>
-              <option value="packageRating_desc">Top Rated</option>
-              <option value="packageTotalRatings_desc">Most Rated</option>
-              <option value="createdAt_desc">Latest</option>
-              <option value="createdAt_asc">Oldest</option>
+              <option value="packagePrice_desc">价格从高到低</option>
+              <option value="packagePrice_asc">价格从低到高</option>
+              <option value="packageRating_desc">评分优先</option>
+              <option value="packageTotalRatings_desc">最多评价</option>
+              <option value="createdAt_desc">最新发布</option>
+              <option value="createdAt_asc">最早发布</option>
             </select>
           </div>
           <button className="bg-slate-700 rounded-lg text-white p-3 uppercase hover:opacity-95">
-            Search
+            搜索路线
           </button>
         </form>
       </div>
-      {/* ------------------------------------------------------------------------------- */}
+
       <div className="flex-1">
         <h1 className="text-xl font-semibold border-b p-3 text-slate-700 mt-5">
-          Package Results:
+          徒步旅游计划如下：
         </h1>
         <div className="w-full p-5 grid 2xl:grid-cols-4 xlplus:grid-cols-3 lg:grid-cols-2 gap-2">
           {!loading && allPackages.length === 0 && (
-            <p className="text-xl text-slate-700">No Packages Found!</p>
+            <p className="text-xl text-slate-700">未找到相关徒步路线！</p>
           )}
           {loading && (
             <p className="text-xl text-slate-700 text-center w-full">
-              Loading...
+              加载中...
             </p>
           )}
           {!loading &&
@@ -175,7 +172,7 @@ const Search = () => {
             onClick={onShowMoreSClick}
             className="text-sm bg-green-700 text-white hover:underline p-2 m-3 rounded text-center w-max"
           >
-            Show More
+            显示更多路线
           </button>
         )}
       </div>

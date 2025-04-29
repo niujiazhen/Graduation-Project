@@ -31,7 +31,7 @@ const Package = () => {
     packageNights: 1,
     packageAccommodation: "",
     packageTransportation: "",
-    packageMeals: "",
+    package: "",
     packageActivities: "",
     packagePrice: 500,
     packageDiscountPrice: 0,
@@ -68,7 +68,7 @@ const Package = () => {
           packageNights: data?.packageData?.packageNights,
           packageAccommodation: data?.packageData?.packageAccommodation,
           packageTransportation: data?.packageData?.packageTransportation,
-          packageMeals: data?.packageData?.packageMeals,
+          packageGear: data?.packageData?.packageGear,
           packageActivities: data?.packageData?.packageActivities,
           packagePrice: data?.packageData?.packagePrice,
           packageDiscountPrice: data?.packageData?.packageDiscountPrice,
@@ -170,12 +170,12 @@ const Package = () => {
     <div className="w-full">
       {loading && (
         <p className="text-center font-semibold" id="loading">
-          Loading...
+          加载中...
         </p>
       )}
       {error && (
         <div className="flex flex-col w-full items-center gap-2">
-          <p className="text-center text-red-700">Something went wrong!</p>
+          <p className="text-center text-red-700">出错了!</p>
           <Link
             className="bg-slate-600 text-white p-3 py-2 rounded-lg w-min"
             to="/"
@@ -214,7 +214,7 @@ const Package = () => {
           </div>
           {copied && (
             <p className="fixed top-[23%] right-[5%] z-10 rounded-md bg-slate-100 p-2">
-              Link copied!
+              链接已复制！
             </p>
           )}
           {/* back button */}
@@ -235,9 +235,9 @@ const Package = () => {
               {packageData?.packageOffer ? (
                 <>
                   <span className="line-through text-gray-700">
-                    ${packageData?.packagePrice}
+                    预计花费：¥{packageData?.packagePrice}
                   </span>{" "}
-                  -<span>${packageData?.packageDiscountPrice}</span>
+                  -<span>预计花费：¥{packageData?.packageDiscountPrice}</span>
                   <span className="text-lg ml-2 bg-green-700 p-1 rounded text-white">
                     {Math.floor(
                       ((+packageData?.packagePrice -
@@ -249,7 +249,7 @@ const Package = () => {
                   </span>
                 </>
               ) : (
-                <span>${packageData?.packagePrice}</span>
+                <span>预计花费：¥{packageData?.packagePrice}</span>
               )}
             </p>
             {/* price */}
@@ -354,25 +354,25 @@ const Package = () => {
             {/* Description */}
             {/* Accommodation */}
             <div className="w-full flex flex-col mt-2">
-              <h4 className="text-xl">Accommodation:</h4>
+              <h4 className="text-xl">住宿安排:</h4>
               <p>{packageData?.packageAccommodation}</p>
             </div>
             {/* Accommodation */}
             {/* Activities */}
             <div className="w-full flex flex-col mt-2">
-              <h4 className="text-xl">Activities:</h4>
+              <h4 className="text-xl">徒步活动:</h4>
               <p>{packageData?.packageActivities}</p>
             </div>
             {/* Activities */}
             {/* meals */}
             <div className="w-full flex flex-col mt-2">
-              <h4 className="text-xl">Meals:</h4>
-              <p>{packageData?.packageMeals}</p>
+              <h4 className="text-xl">装备推荐:</h4>
+              <p>{packageData?.packageGear}</p>
             </div>
             {/* meals */}
             {/* Transportation */}
             <div className="w-full flex flex-col mt-2">
-              <h4 className="text-xl">Transportation:</h4>
+              <h4 className="text-xl">交通方式:</h4>
               <p>{packageData?.packageTransportation}</p>
             </div>
             {/* Transportation */}
@@ -381,7 +381,7 @@ const Package = () => {
             <div className="w-full flex flex-col mt-2 items-center">
               {packageRatings && (
                 <>
-                  <h4 className="text-xl">Rating/Reviews:</h4>
+                  <h4 className="text-xl">用户评分与评价:</h4>
                   <div
                     className={`w-full sm:max-w-[640px] gap-2 ${
                       !currentUser || ratingGiven
@@ -425,7 +425,7 @@ const Package = () => {
                       }}
                       className="w-full p-2 bg-green-700 text-white rounded disabled:opacity-80 hover:opacity-95"
                     >
-                      {loading ? "Loading..." : "Submit"}
+                      {loading ? "提交中..." : "提交评价"}
                     </button>
                     <hr />
                   </div>
@@ -438,7 +438,7 @@ const Package = () => {
                         }
                         className="flex items-center justify-center text-lg gap-2 p-2 rounded border hover:bg-slate-500 hover:text-white"
                       >
-                        View All <FaArrowRight />
+                        查看全部评价 <FaArrowRight />
                       </button>
                     )}
                   </div>
@@ -451,7 +451,7 @@ const Package = () => {
                   }}
                   className="p-2 rounded text-white bg-green-700"
                 >
-                  Rate Package
+                  登录后评分
                 </button>
               )}
             </div>
