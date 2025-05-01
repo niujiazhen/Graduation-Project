@@ -12,13 +12,13 @@
   "packageGear": "登山鞋、防晒衣、登山杖、背包、头灯、雨衣",
   "packageActivities": "高路徒步路线穿越茶马古道，欣赏玉龙雪山和哈巴雪山全景。",
   "packagePrice": 1299,
-  "packageDiscountPrice": 1099,
+  "packageDiscountPrice": 0,
   "packageOffer": true,
   "packageRating": 4.8,
   "packageTotalRatings": 152,
   "packageImages": [
-    "https://example.com/images/tigerleaping1.jpg",
-    "https://example.com/images/tigerleaping2.jpg"
+    "src/pages/img/虎跳峡1.JPG",
+    "src/pages/img/虎跳峡2.jpg"
   ]
 },
 {
@@ -40,8 +40,8 @@
   "packageRating": 4.6,
   "packageTotalRatings": 89,
   "packageImages": [
-    "https://example.com/images/changbaishan1.jpg",
-    "https://example.com/images/changbaishan2.jpg"
+    "src/pages/img/长白山森林1.jpg",
+    "src/pages/img/"
   ]
 },
 {
@@ -63,8 +63,8 @@
   "packageRating": 4.9,
   "packageTotalRatings": 210,
   "packageImages": [
-    "https://example.com/images/gongga1.jpg",
-    "https://example.com/images/gongga2.jpg"
+    "src/pages/img/贡嘎雪山2.jpg",
+    "src/pages/img/"
   ]
 },
 {
@@ -86,8 +86,8 @@
   "packageRating": 4.7,
   "packageTotalRatings": 174,
   "packageImages": [
-    "https://example.com/images/yubeng1.jpg",
-    "https://example.com/images/yubeng2.jpg"
+    "src/pages/img/雨崩村1.jpg",
+    "src/pages/img/"
   ]
 },
 {
@@ -109,8 +109,8 @@
   "packageRating": 4.5,
   "packageTotalRatings": 68,
   "packageImages": [
-    "https://example.com/images/fanjingshan1.jpg",
-    "https://example.com/images/fanjingshan2.jpg"
+    "src/pages/img/梵净山原始森林1.jpg",
+    "src/pages/img/"
   ]
 },
 {
@@ -132,8 +132,8 @@
   "packageRating": 3.8,
   "packageTotalRatings": 5,
   "packageImages": [
-    "https://example.com/images/yading1.jpg",
-    "https://example.com/images/yading2.jpg"
+    "src/pages/img/稻城亚丁1.jpg",
+    "src/pages/img/"
   ],
   "updatedAt": {
     "$date": "2025-04-29T09:02:04.241Z"
@@ -158,8 +158,8 @@
   "packageRating": 4.6,
   "packageTotalRatings": 124,
   "packageImages": [
-    "https://example.com/images/wugong1.jpg",
-    "https://example.com/images/wugong2.jpg"
+    "src/pages/img/武功山1.jpg",
+    "src/pages/img/"
   ]
 },
 {
@@ -181,8 +181,8 @@
   "packageRating": 4.4,
   "packageTotalRatings": 56,
   "packageImages": [
-    "https://example.com/images/aershan1.jpg",
-    "https://example.com/images/aershan2.jpg"
+    "src/pages/img/阿尔山森林2.jpg",
+    "src/pages/img/"
   ]
 },
 {
@@ -199,14 +199,17 @@
   "packageGear": "雪地靴、保暖衣、冰爪、手套",
   "packageActivities": "雪景登山、森林穿越、雪地摄影。",
   "packagePrice": 999,
-  "packageDiscountPrice": 899,
+  "packageDiscountPrice": 0,
   "packageOffer": true,
-  "packageRating": 4.3,
-  "packageTotalRatings": 70,
+  "packageRating": 2,
+  "packageTotalRatings": 2,
   "packageImages": [
-    "https://example.com/images/xiling1.jpg",
-    "https://example.com/images/xiling2.jpg"
-  ]
+    "src/pages/img/西岭雪山冬季雪地徒步1.jpg",
+    "src/pages/img/"
+  ],
+  "updatedAt": {
+    "$date": "2025-04-30T05:36:33.898Z"
+  }
 },
 {
   "_id": {
@@ -227,7 +230,7 @@
   "packageRating": 4.7,
   "packageTotalRatings": 92,
   "packageImages": [
-    "https://example.com/images/pudacuo1.jpg",
-    "https://example.com/images/pudacuo2.jpg"
+    "src/pages/img/普达措1.jpg",
+    "src/pages/img/"
   ]
 }]
