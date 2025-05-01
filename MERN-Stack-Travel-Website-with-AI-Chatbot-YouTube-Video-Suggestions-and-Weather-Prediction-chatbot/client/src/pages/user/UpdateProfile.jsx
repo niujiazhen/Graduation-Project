@@ -140,10 +140,10 @@ const UpdateProfile = () => {
     >
       {updateProfileDetailsPanel === true ? (
         <div className="flex flex-col border self-center border-black rounded-lg p-2 w-72 h-fit gap-2 sm:w-[320px]">
-          <h1 className="text-2xl text-center font-semibold">Update Profile</h1>
+          <h1 className="text-2xl text-center font-semibold">更新资料</h1>
           <div className="flex flex-col">
             <label htmlFor="username" className="font-semibold">
-              Username:
+              用户名:
             </label>
             <input
               type="text"
@@ -155,7 +155,7 @@ const UpdateProfile = () => {
           </div>
           <div className="flex flex-col">
             <label htmlFor="email" className="font-semibold">
-              Email:
+              邮箱:
             </label>
             <input
               type="email"
@@ -167,7 +167,7 @@ const UpdateProfile = () => {
           </div>
           <div className="flex flex-col">
             <label htmlFor="address" className="font-semibold">
-              Address:
+              地址:
             </label>
             <textarea
               maxLength={200}
@@ -180,7 +180,7 @@ const UpdateProfile = () => {
           </div>
           <div className="flex flex-col">
             <label htmlFor="phone" className="font-semibold">
-              Phone:
+              电话:
             </label>
             <input
               type="text"
@@ -195,7 +195,7 @@ const UpdateProfile = () => {
             onClick={updateUserDetails}
             className="p-2 text-white bg-slate-700 rounded hover:opacity-95"
           >
-            {loading ? "Loading..." : "Update"}
+            {loading ? "加载中..." : "更新"}
           </button>
           <button
             disabled={loading}
@@ -203,17 +203,17 @@ const UpdateProfile = () => {
             onClick={() => setUpdateProfileDetailsPanel(false)}
             className="p-2 text-white bg-red-700 rounded hover:opacity-95"
           >
-            {loading ? "Loading..." : "Change Password"}
+            {loading ? "加载中..." : "修改密码"}
           </button>
         </div>
       ) : (
         <div className="flex flex-col border border-black rounded-lg p-2 w-72 h-fit gap-2 sm:w-[320px]">
           <h1 className="text-2xl text-center font-semibold">
-            Change Password
+            修改密码
           </h1>
           <div className="flex flex-col">
             <label htmlFor="username" className="font-semibold">
-              Enter old password:
+              输入旧密码:
             </label>
             <input
               type="text"
@@ -225,7 +225,7 @@ const UpdateProfile = () => {
           </div>
           <div className="flex flex-col">
             <label htmlFor="username" className="font-semibold">
-              Enter new password:
+              输入新密码:
             </label>
             <input
               type="text"
@@ -240,7 +240,7 @@ const UpdateProfile = () => {
             onClick={updateUserPassword}
             className="p-2 text-white bg-slate-700 rounded hover:opacity-95"
           >
-            {loading ? "Loading..." : "Update Password"}
+            {loading ? "加载中..." : "修改密码"}
           </button>
           <button
             disabled={loading}
