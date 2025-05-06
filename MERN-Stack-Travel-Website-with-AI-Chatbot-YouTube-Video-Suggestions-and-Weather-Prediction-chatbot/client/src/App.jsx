@@ -17,6 +17,7 @@ import PackageCard from "./pages/PackageCard";
 import Package from "./pages/Package";
 import RatingsPage from "./pages/RatingsPage";
 import RatingCard from "./pages/RatingCard";
+import ManagePackages from "./pages/ManagePackage";
 
 const App = () => {
   console.log("VITE_GEMINI_API_KEY:", import.meta.env.VITE_GEMINI_API_KEY);
@@ -30,6 +31,7 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/search" element={<Search />} />
+        <Route path="/manage" element={<ManagePackages />} />
         {/* user */}
         <Route path="/profile" element={<PrivateRoute />}>
           <Route path="user" element={<Profile />} />
