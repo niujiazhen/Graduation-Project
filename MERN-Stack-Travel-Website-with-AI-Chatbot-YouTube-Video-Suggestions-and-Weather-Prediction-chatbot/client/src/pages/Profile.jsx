@@ -141,7 +141,7 @@ const Profile = () => {
                   </button>
                 )}
                 <h2 className="text-3xl font-bold text-gray-800">{currentUser.username}</h2>
-                <p className="text-gray-600 italic">"Adventure awaits!"</p>
+                <p className="text-gray-600 italic">"快来徒步吧!"</p>
                 <div className="w-full border-t border-gray-200 my-4"></div>
                 <div className="w-full space-y-2">
                   <p className="text-gray-700"><strong>邮箱:</strong> {currentUser.email}</p>

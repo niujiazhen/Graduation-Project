@@ -175,17 +175,20 @@ export const getPackageData = async (req, res) => {
 export const updatePackage = async (req, res) => {
   try {
     const findPackage = await Package.findById(req.params.id);
+    console.log(findPackage);
     if (!findPackage)
       return res.status(404).send({
         success: false,
         message: "Package not found!",
       });
-
+      console.log("找到package了")
+      console.log(req.params.id)
     const updatedPackage = await Package.findByIdAndUpdate(
       req.params.id,
       req.body,
       { new: true }
     );
+    console.log("更新package了")
     res.status(200).send({
       success: true,
       message: "Package updated successfully!",
