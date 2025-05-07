@@ -14,6 +14,8 @@ var gateway = new braintree.BraintreeGateway({
 
 //create package
 export const createPackage = async (req, res) => {
+  console.log(req.body);
+  console.log(req.files);
   try {
     const {
       packageName,
@@ -28,45 +30,70 @@ export const createPackage = async (req, res) => {
       packagePrice,
       packageDiscountPrice,
       packageOffer,
-      packageImages,
+      // packageImages,
     } = req.body;
 
+    // ❗ multer 处理后的文件保存在 req.files
+    const packageImages = req.files;
+    console.log("Package Images: ", packageImages);
+    console.log("到这了1")
+    console.log("packageName", packageName);
+    console.log("packageDescription", packageDescription);
+    console.log("packageDestination", packageDestination);
+    console.log("packageDays", packageDays);
+    console.log("packageNights", packageNights);
+    console.log("packageAccommodation", packageAccommodation);
+    console.log("packageTransportation", packageTransportation);
+    console.log("packageMeals", packageMeals);
+    console.log("packageActivities", packageActivities);
+    console.log("packagePrice", packagePrice);
+    console.log("packageDiscountPrice", packageDiscountPrice);
+    console.log("packageOffer", packageOffer);
+    console.log("packageImages", packageImages);
     if (
       !packageName ||
       !packageDescription ||
       !packageDestination ||
       !packageAccommodation ||
       !packageTransportation ||
-      !packageMeals ||
+      // !packageMeals ||
       !packageActivities ||
-      !packageOffer === "" ||
-      !packageImages
+      !packageOffer ||  
+      !packageImages || packageImages.length === 0
     ) {
       return res.status(200).send({
         success: false,
         message: "All fields are required!",
       });
     }
-    if (packagePrice < packageDiscountPrice) {
-      return res.status(200).send({
-        success: false,
-        message: "Regular price should be greater than discount price!",
-      });
-    }
-    if (packagePrice <= 0 || packageDiscountPrice < 0) {
-      return res.status(200).send({
-        success: false,
-        message: "Price should be greater than 0!",
-      });
-    }
-    if (packageDays <= 0 && packageNights <= 0) {
-      return res.status(200).send({
-        success: false,
-        message: "Provide days and nights!",
-      });
-    }
+    console.log("到这了2")
+    // if (packagePrice < packageDiscountPrice) {
+    //   return res.status(200).send({
+    //     success: false,
+    //     message: "Regular price should be greater than discount price!",
+    //   });
+    // }
+    // if (packagePrice <= 0 || packageDiscountPrice < 0) {
+    //   return res.status(200).send({
+    //     success: false,
+    //     message: "Price should be greater than 0!",
+    //   });
+    // }
+    // if (packageDays <= 0 && packageNights <= 0) {
+    //   return res.status(200).send({
+    //     success: false,
+    //     message: "Provide days and nights!",
+    //   });
+    // }
+    console.log("到这了");
+    // 提取图片文件名（或 file.path）
+    const imagePaths = "src/pages/img/"+packageImages.map(file => file.filename); // or file.path if full path needed
 
-    const newPackage = await Package.create(req.body);
+    const newPackage = await Package.create({
+      ...req.body,
+      packageImages: imagePaths,
+    });
+    console.log(newPackage);
     if (newPackage) {
       return res.status(201).send({
         success: true,

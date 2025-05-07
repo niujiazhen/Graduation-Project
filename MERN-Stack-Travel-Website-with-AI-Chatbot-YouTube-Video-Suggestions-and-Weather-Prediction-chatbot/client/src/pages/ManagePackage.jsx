@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const initialFormData = {
   packageName: "",
@@ -6,6 +7,7 @@ const initialFormData = {
   packageDestination: "",
   packageDays: 1,
   packageNights: 1,
+  packageMeals: "",
   packageAccommodation: "",
   packageTransportation: "",
   packageGear: "",
@@ -71,10 +73,11 @@ const ManagePackage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log("Form Data:", formData);
     const form = new FormData();
     for (let key in formData) {
       if (key === "packageImages") {
-        formData.packageImages.forEach((img) => form.append("packageImages", img));
+        formData.packageImages.forEach((img) => form.append("packageImages",img));
       } else {
         form.append(key, formData[key]);
       }
@@ -82,9 +85,16 @@ const ManagePackage = () => {
 
     try {
       const url = isEditing
-        ? `/api/package/update/${editId}`
-        : "/api/package/create";
-      const method = isEditing ? "PUT" : "POST";
+        ? `/api/package/update-package/${editId}`
+        : "/api/package/create-package";
+      const method = isEditing ? "POST" : "POST";
+      console.log("URL:", url);
+      console.log("Method:", method);
+      console.log("Form Data:", formData);
+      console.log("Form:", form);
+      for (let [key, value] of form.entries()) {
+        console.log(`${key}:`, value);
+      }
 
       await fetch(url, {
         method,
@@ -100,7 +110,7 @@ const ManagePackage = () => {
 
   const handleDelete = async (id) => {
     if (!window.confirm("确定要删除该路线吗？")) return;
-    await fetch(`/api/package/delete/${id}`, { method: "DELETE" });
+    await fetch(`/api/package/delete-package/${id}`, { method: "DELETE" });
     fetchPackages();
   };
 
