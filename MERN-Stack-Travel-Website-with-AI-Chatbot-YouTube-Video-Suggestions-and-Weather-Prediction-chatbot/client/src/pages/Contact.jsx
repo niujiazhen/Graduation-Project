@@ -29,7 +29,7 @@ const Contact = () => {
           <div className="flex flex-col md:flex-row gap-8">
             <div className="w-full md:w-1/2 shadow-2xl">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248849.84916296526!2d77.49085452562913!3d12.953997351439578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1689835438050!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d32631705.126212098!2d85.99999999999999!3d35.86166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35f05296d960dffb%3A0xe0b4cf2bdbdd86!2z5Lit5Zu9!5e0!3m2!1szh-CN!2scn!4v1715158913704!5m2!1szh-CN!2scn"
                 width="100%"
                 height="450"
                 style={{ border: 0 }}

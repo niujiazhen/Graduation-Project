@@ -18,6 +18,24 @@ const initialFormData = {
   packageImages: [],
 };
 
+const fieldLabels = {
+  packageName: "徒步计划名称",
+  packageDescription: "徒步计划描述",
+  packageDestination: "徒步目的地",
+  packageDays: "徒步天数",
+  packageNights: "徒步夜数",
+  packageAccommodation: "住宿安排",
+  packageTransportation: "交通方式",
+  packageGear: "徒步推荐装备",
+  packageActivities: "徒步活动内容",
+  packagePrice: "预计花费",
+  packageImages: "上传图片",
+};
+
+const excludedFields = ["packageMeals", "packageDiscountPrice", "packageOffer"];
+
+
+
 const ManagePackage = () => {
   const [packages, setPackages] = useState([]);
   const [formData, setFormData] = useState(initialFormData);
@@ -134,7 +152,7 @@ const ManagePackage = () => {
             <p>{pkg.packageDescription}</p>
             <p>目的地: {pkg.packageDestination}</p>
             <p>天数: {pkg.packageDays} 天 / {pkg.packageNights} 夜</p>
-            <p>价格: ¥{pkg.packagePrice} (折扣 ¥{pkg.packageDiscountPrice})</p>
+            <p>预计花费: ¥{pkg.packagePrice}</p>
             {pkg.packageImages?.[0] && (
               <img
                 src={pkg.packageImages[0]}
@@ -175,6 +193,7 @@ const ManagePackage = () => {
             </h2>
             <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {Object.entries(initialFormData).map(([key, value]) => {
+                if (excludedFields.includes(key)) return null; // 跳过不展示的字段
                 if (key === "packageOffer") {
                   return (
                     <div key={key} className="flex items-center gap-2">
@@ -203,7 +222,8 @@ const ManagePackage = () => {
                 }
                 return (
                   <div key={key}>
-                    <label className="font-semibold block">{key}:</label>
+                    <label className="font-semibold block">{fieldLabels[key] || key}:</label>
+
                     <input
                       id={key}
                       value={formData[key]}
