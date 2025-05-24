@@ -104,6 +104,10 @@ export const sendMessage = async (userInput) => {
     initializeChat();
   }
 
+  if (!userInput || typeof userInput !== "string" || userInput.trim() === "") {
+    return "请输入有效的问题或目的地信息。";
+  }
+
   if (isGreeting(userInput)) {
     const greeting = "你好！我是 Triplo，一名徒步旅行专家！需要帮你规划徒步路线吗？🏞️";
     chatHistory.push({ role: "model", parts: greeting });
@@ -114,21 +118,29 @@ export const sendMessage = async (userInput) => {
   chatHistory.push({ role: "user", parts: userInput });
 
   try {
+    console.log("🟡 正在发送 Prompt：", prompt); // 调试用：查看 prompt 内容
+
     const result = await chat.sendMessage(prompt);
     const response = result.response.text().trim();
+
     chatHistory.push({ role: "model", parts: response });
 
-    // 限制聊天历史记录为最后 10 条
+    // 限制历史为最近10条
     if (chatHistory.length > 10) {
       chatHistory = chatHistory.slice(-10);
     }
 
     return response;
   } catch (error) {
-    console.error('发送消息时出错:', error);
-    return "抱歉，处理您的请求时出现了错误。请稍后再试。";
+    if (error.message.includes("429")) {
+    return "请求太频繁或已超过免费额度，请稍后再试，或升级到付费计划以获取更高配额。🌐";
+  }
+
+  console.error("🔴 发送消息时出错：", error);
+  return "抱歉，处理您的请求时出现了错误。请稍后再试。";
   }
 };
+
 
 // 获取聊天历史
 export const getChatHistory = () => {
